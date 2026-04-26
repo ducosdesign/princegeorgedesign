@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prince George Design | Digital Support Studio BC</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Outfit:wght@800&display=swap');
 
@@ -27,7 +28,7 @@
             line-height: 1.5;
         }
 
-        /* Navigation */
+        /* --- Navigation --- */
         nav {
             padding: 25px 5%;
             display: flex;
@@ -48,140 +49,60 @@
             color: var(--text-main);
         }
         .logo span { color: var(--primary); }
+        .nav-links a { margin-left: 25px; text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
 
-        /* Hero Section */
+        /* --- Hero --- */
         .hero {
             padding: 120px 5% 140px;
             text-align: left;
             border-bottom: 1px solid var(--border);
             background: radial-gradient(circle at 80% 20%, #fff5f4 0%, #ffffff 50%);
         }
-        .hero-tag {
-            color: var(--primary);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: block;
-        }
-        .hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(3.5rem, 10vw, 7.5rem);
-            line-height: 0.85;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            letter-spacing: -3px;
-        }
-        .hero p {
-            max-width: 550px;
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            margin-bottom: 40px;
-        }
+        .hero-tag { color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; margin-bottom: 20px; display: block; }
+        .hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(3.5rem, 10vw, 7.5rem); line-height: 0.85; text-transform: uppercase; margin-bottom: 40px; letter-spacing: -3px; }
+        
+        /* --- Sections --- */
+        section { padding: 100px 5%; border-bottom: 1px solid var(--border); }
+        .section-title { font-family: 'Outfit'; font-size: 3rem; text-transform: uppercase; margin-bottom: 50px; line-height: 0.9; }
 
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            border-bottom: 1px solid var(--border);
-        }
-        .stat-item {
-            padding: 50px 5%;
-            border-right: 1px solid var(--border);
-        }
-        .stat-item:last-child { border-right: none; }
-        .stat-item h2 { font-size: 3rem; font-family: 'Outfit', sans-serif; color: var(--text-main); }
-        .stat-item p { color: var(--text-dim); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; margin-top: 5px; }
+        /* --- Stats Grid --- */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); padding: 0; }
+        .stat-item { padding: 50px 5%; border-right: 1px solid var(--border); transition: background 0.3s; }
+        .stat-item:hover { background: #fafafa; }
+        .stat-item h2 { font-size: 3rem; font-family: 'Outfit', sans-serif; }
+        .stat-item p { color: var(--text-dim); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; }
 
-        /* Process Section */
-        .process-section { padding: 100px 5%; border-bottom: 1px solid var(--border); }
-        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 50px; }
-        .process-step h3 { font-size: 0.9rem; color: var(--primary); margin-bottom: 10px; letter-spacing: 1px; }
+        /* --- Bento Grid --- */
+        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .bento-card { padding: 40px; border: 1px solid var(--border); border-radius: 4px; transition: transform 0.3s ease; }
+        .bento-card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
-        /* Focus Section */
-        .focus-section { padding: 100px 5%; border-bottom: 1px solid var(--border); background: #fafafa; }
-        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center; }
-        .focus-item { padding-bottom: 20px; border-bottom: 1px solid var(--border); }
-
-        /* Pricing Section */
-        .pricing { padding: 100px 5% 0; }
-        .pricing-header { margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;}
-        .pricing-header h2 { font-size: 4rem; text-transform: uppercase; font-family: 'Outfit'; letter-spacing: -2px; }
-        .guarantee-badge { padding: 10px 20px; border: 1px solid var(--primary); color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; border-radius: 4px; }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            border: 1px solid var(--border);
-            border-bottom: none;
-        }
-        .price-card {
-            background: var(--bg);
-            padding: 70px 40px;
-            display: flex;
-            flex-direction: column;
-            border-right: 1px solid var(--border);
-            transition: background 0.3s;
-        }
-        .price-card:hover { background: #fdfdfd; }
-        .price-card:last-child { border-right: none; }
+        /* --- Pricing --- */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); border: 1px solid var(--border); border-bottom: none; }
+        .price-card { background: var(--bg); padding: 70px 40px; display: flex; flex-direction: column; border-right: 1px solid var(--border); }
         .price-card.featured { background: #fffafa; }
-
         .price-card h3 { font-size: 1rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 30px; }
         .price-card .cost { font-size: 4.5rem; font-family: 'Outfit'; margin-bottom: 5px; letter-spacing: -2px; }
-        .price-card .cost span { font-size: 1.2rem; color: var(--text-dim); font-family: 'Space Grotesk'; }
-        .price-card .hours { color: var(--primary); font-weight: 700; margin-bottom: 40px; }
-        
-        .price-list { list-style: none; margin-bottom: 50px; }
-        .price-list li { margin-bottom: 18px; display: flex; align-items: center; font-weight: 500; }
-        .price-list li i { margin-right: 12px; color: var(--primary); font-size: 0.7rem; }
 
-        /* FAQ Section */
-        .faq-section { padding: 100px 5%; border-bottom: 1px solid var(--border); }
+        /* --- FAQ --- */
         details { padding: 25px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
         summary { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; list-style: none; }
 
-        /* Promo Block */
-        .intro-promo {
-            padding: 100px 5%;
-            background: var(--text-main);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .intro-promo h2 { font-family: 'Outfit'; font-size: 3.5rem; text-transform: uppercase; line-height: 0.9; }
-        .intro-promo .highlight { color: var(--primary); }
-
-        /* Buttons */
-        .btn {
-            padding: 22px 40px;
-            font-family: 'Space Grotesk';
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: 0.3s;
-            border: none;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-align: center;
-        }
+        /* --- Buttons --- */
+        .btn { padding: 22px 40px; font-family: 'Space Grotesk'; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: 0.3s; border: none; display: inline-block; text-decoration: none; font-size: 0.9rem; text-align: center; }
         .btn-black { background: var(--text-main); color: white; }
+        .btn-black:hover { background: #333; }
         .btn-primary { background: var(--primary); color: white; width: 100%; margin-top: auto; }
         .btn-white { background: white; color: var(--text-main); }
 
-        /* Footer */
+        /* --- Footer --- */
         footer { padding: 100px 5%; background: #fafafa; border-top: 1px solid var(--border); }
-        .footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
-        .disclaimer { font-size: 0.75rem; color: var(--text-dim); margin-top: 60px; max-width: 800px; line-height: 1.6; }
+        .disclaimer { font-size: 0.75rem; color: var(--text-dim); margin-top: 60px; line-height: 1.6; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
-            .intro-promo, .focus-grid { flex-direction: column; text-align: center; gap: 40px; }
-            .price-card { border-right: none; border-bottom: 1px solid var(--border); }
+            .price-card, .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+            .intro-promo { flex-direction: column; text-align: center; gap: 40px; }
         }
     </style>
 </head>
@@ -189,99 +110,135 @@
 
     <nav>
         <a href="#" class="logo">PrinceGeorge<span>Design</span></a>
-        <div style="font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">
-            <a href="tel:2363316939" style="text-decoration: none; color: inherit;">(236) 331-6939</a> // PG, BC
+        <div class="nav-links">
+            <a href="#pricing">Pricing</a>
+            <a href="https://shop.princegeorgedesign.com/pages/contact">Contact</a>
+            <a href="tel:2363316939" style="color: var(--primary);">(236) 331-6939</a>
         </div>
     </nav>
 
     <header class="hero">
-        <span class="hero-tag">Digital Design Studio</span>
-        <h1>Support <br>that scales.</h1>
-        <p>Premium Shopify & WordPress maintenance for Prince George business owners. Call/Text <strong>236-331-6939</strong> or email <strong>princegeorgedesign@gmail.com</strong>.</p>
-        <a href="#pricing" class="btn btn-black">Explore Plans</a>
+        <div class="animate__animated animate__fadeInLeft">
+            <span class="hero-tag">Digital Design Studio</span>
+            <h1>Web support <br>made local.</h1>
+            <p>Premium Shopify & WordPress maintenance for Prince George business owners. <br>Call <strong>236-331-6939</strong> or email <strong>princegeorgedesign@gmail.com</strong>.</p>
+            <a href="#pricing" class="btn btn-black">Explore Plans</a>
+        </div>
     </header>
 
-    <section class="stats-grid">
-        <div class="stat-item"><h2>PG</h2><p>100% Local Presence</p></div>
+    <div class="stats-grid animate__animated animate__fadeIn">
+        <div class="stat-item"><h2>PG</h2><p>Local 236 Presence</p></div>
         <div class="stat-item"><h2>24h</h2><p>Response Guarantee</p></div>
         <div class="stat-item"><h2>0%</h2><p>Long-Term Contracts</p></div>
         <div class="stat-item"><h2>CAD</h2><p>Honest Local Pricing</p></div>
-    </section>
+    </div>
 
-    <section class="process-section">
-        <span class="hero-tag">Workflow</span>
-        <h2 style="font-family: 'Outfit'; font-size: 3rem; text-transform: uppercase;">The 4-Step Process</h2>
-        <div class="process-grid">
-            <div class="process-step"><h3>01 // DISCOVERY</h3><p>We define your "To-Do" list via phone or email.</p></div>
-            <div class="process-step"><h3>02 // STRATEGY</h3><p>We select the hourly block that fits your project budget.</p></div>
-            <div class="process-step"><h3>03 // EXECUTION</h3><p>Work begins. Small tasks are usually wrapped in 48 hours.</p></div>
-            <div class="process-step"><h3>04 // APPROVAL</h3><p>Review the updates and launch once you're 100% satisfied.</p></div>
-        </div>
-    </section>
-
-    <section class="focus-section">
-        <div class="focus-grid">
-            <h2 style="font-family: 'Outfit'; font-size: 3.5rem; text-transform: uppercase; line-height: 0.9;">More than <br>just a <br><span style="color: var(--primary);">fixer.</span></h2>
-            <div>
-                <div class="focus-item"><h4>Shopify Development</h4><p style="color: var(--text-dim); font-size: 0.9rem;">Custom Liquid coding, app setup, and theme modifications.</p></div>
-                <div class="focus-item" style="margin-top: 20px;"><h4>WordPress Maintenance</h4><p style="color: var(--text-dim); font-size: 0.9rem;">Core updates, security patches, and plugin troubleshooting.</p></div>
-                <div class="focus-item" style="margin-top: 20px;"><h4>Graphic & UI Design</h4><p style="color: var(--text-dim); font-size: 0.9rem;">Logo refinement, web banners, and brand asset creation.</p></div>
+    <section id="capabilities">
+        <span class="hero-tag">Capabilities</span>
+        <h2 class="section-title">Beyond the <span style="color: var(--primary);">basics.</span></h2>
+        <div class="bento-grid">
+            <div class="bento-card">
+                <i class="fas fa-bolt" style="color: var(--primary); margin-bottom: 20px;"></i>
+                <h3 style="text-transform: uppercase; margin-bottom: 10px;">Performance</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">We optimize Core Web Vitals to make your store load in under 2 seconds, reducing bounce rates.</p>
+            </div>
+            <div class="bento-card" style="background: var(--text-main); color: white;">
+                <i class="fas fa-mobile-alt" style="color: var(--primary); margin-bottom: 20px;"></i>
+                <h3 style="text-transform: uppercase; margin-bottom: 10px;">Mobile First</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem;">60% of PG traffic is mobile. We ensure your checkout and navigation are flawless on every screen.</p>
+            </div>
+            <div class="bento-card">
+                <i class="fas fa-shield-virus" style="color: var(--primary); margin-bottom: 20px;"></i>
+                <h3 style="text-transform: uppercase; margin-bottom: 10px;">Security</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Proactive security patches and firewall monitoring to protect your customer data 24/7.</p>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section id="pricing">
         <div class="pricing-header">
-            <h2>Pricing</h2>
+            <h2 class="section-title">Pricing</h2>
             <div class="guarantee-badge"><i class="fas fa-shield-alt"></i> 100% Refund if Unsatisfied</div>
         </div>
         <div class="pricing-grid">
             <div class="price-card">
-                <h3>Starter</h3>
+                <h3>Starter Block</h3>
                 <div class="cost">$149 <span>CAD</span></div>
-                <div class="hours">4 Hours Support</div>
-                <ul class="price-list"><li><i class="fas fa-square"></i> Core Updates</li><li><i class="fas fa-square"></i> Security Monitoring</li><li><i class="fas fa-square"></i> Minor Fixes</li></ul>
+                <div class="hours">4 Hours Professional Support</div>
+                <ul style="list-style: none; margin: 30px 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-square" style="color: var(--primary); margin-right: 10px;"></i> Minor Fixes & Updates</li>
+                </ul>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
             <div class="price-card featured">
-                <h3>Growth</h3>
+                <h3>Growth Block</h3>
                 <div class="cost">$299 <span>CAD</span></div>
-                <div class="hours">10 Hours Support</div>
-                <ul class="price-list"><li><i class="fas fa-square"></i> Custom Feature Dev</li><li><i class="fas fa-square"></i> Speed Optimization</li><li><i class="fas fa-square"></i> Priority Response</li></ul>
+                <div class="hours">10 Hours Professional Support</div>
+                <ul style="list-style: none; margin: 30px 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-square" style="color: var(--primary); margin-right: 10px;"></i> Custom Feature Dev</li>
+                </ul>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
             <div class="price-card">
-                <h3>Scale</h3>
+                <h3>Scale Block</h3>
                 <div class="cost">$499 <span>CAD</span></div>
-                <div class="hours">20 Hours Support</div>
-                <ul class="price-list"><li><i class="fas fa-square"></i> Full Redesigns</li><li><i class="fas fa-square"></i> Branding Assets</li><li><i class="fas fa-square"></i> Dedicated Dev Time</li></ul>
+                <div class="hours">20 Hours Professional Support</div>
+                <ul style="list-style: none; margin: 30px 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-square" style="color: var(--primary); margin-right: 10px;"></i> Full Site Redesigns</li>
+                </ul>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
         </div>
     </section>
 
-    <section class="faq-section">
-        <h2 style="font-family: 'Outfit'; font-size: 3rem; text-transform: uppercase; margin-bottom: 40px;">FAQs</h2>
-        <details><summary>Do you work with non-PG businesses?</summary><p style="margin-top: 15px; color: var(--text-dim);">I prioritize local BC businesses but support clients across Canada.</p></details>
-        <details><summary>What if I don't use all my hours?</summary><p style="margin-top: 15px; color: var(--text-dim);">Hours remain valid in your account for 12 months from purchase.</p></details>
-        <details><summary>Why is there no tax charged?</summary><p style="margin-top: 15px; color: var(--text-dim);">As a CRA Small Supplier, I am not required to charge GST/PST, saving you 12% instantly.</p></details>
+    <section style="background: #fffafa;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+            <div>
+                <span class="hero-tag">The Personal Touch</span>
+                <h2 class="section-title">Work with <br>a human.</h2>
+                <p style="color: var(--text-dim); margin-bottom: 30px;">Tired of support tickets? Call a local developer who understands the Prince George market. Direct access, no middlemen.</p>
+                <a href="https://shop.princegeorgedesign.com/pages/contact" class="btn btn-black">Contact Me</a>
+            </div>
+            <div style="background: white; border: 1px solid var(--border); padding: 40px; box-shadow: 10px 10px 0px var(--primary);">
+                <h4 style="text-transform: uppercase; margin-bottom: 20px;">Why Local?</h4>
+                <p style="font-size: 0.9rem; color: var(--text-dim); line-height: 2;">
+                    ✓ Same Time Zone (PT) <br>
+                    ✓ No GST/PST charged <br>
+                    ✓ Direct phone line: 236-331-6939 <br>
+                    ✓ Local BC business support
+                </p>
+            </div>
+        </div>
     </section>
 
-    <div class="intro-promo">
+    <div class="intro-promo" style="background: var(--text-main); color: white; padding: 100px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
         <div>
-            <h2>First Order <br><span class="highlight">$75 OFF</span></h2>
-            <p style="margin-top: 20px; opacity: 0.8;">Special introductory rate for Prince George local businesses.</p>
+            <h2 style="font-family: 'Outfit'; font-size: 3.5rem; text-transform: uppercase;">First Order <br><span style="color: var(--primary);">$75 OFF</span></h2>
+            <p style="margin-top: 20px; opacity: 0.8;">Special rate for new Prince George clients.</p>
         </div>
         <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-white">Claim Discount</a>
     </div>
 
+    <section>
+        <h2 class="section-title">FAQs</h2>
+        <details><summary>What if I don't use all my hours?</summary><p style="padding-top: 15px; color: var(--text-dim);">Hours remain valid for 12 months from purchase.</p></details>
+        <details><summary>Why no tax?</summary><p style="padding-top: 15px; color: var(--text-dim);">As a CRA Small Supplier, I don't charge GST/PST—saving you 12% instantly.</p></details>
+        <details><summary>How do I start?</summary><p style="padding-top: 15px; color: var(--text-dim);">Purchase a block, or <a href="https://shop.princegeorgedesign.com/pages/contact" style="color: var(--primary);">send a message here</a> to discuss your project.</p></details>
+    </section>
+
     <footer>
-        <div class="footer-content">
-            <div><div class="logo">PrinceGeorge<span>Design</span></div><p style="margin-top: 10px;">Prince George, BC // <a href="mailto:princegeorgedesign@gmail.com" style="color: inherit;">princegeorgedesign@gmail.com</a></p></div>
-            <div style="text-align: right;"><p style="font-weight: 700;">Direct Line:</p><a href="tel:2363316939" style="text-decoration: none; color: var(--primary); font-weight: 800; font-size: 1.2rem;">(236) 331-6939</a></div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
+            <div>
+                <div class="logo">PrinceGeorge<span>Design</span></div>
+                <p style="margin-top: 15px;">Prince George, BC // princegeorgedesign@gmail.com</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="font-weight: 700;">Local Line:</p>
+                <a href="tel:2363316939" style="text-decoration: none; color: var(--primary); font-weight: 800; font-size: 1.2rem;">(236) 331-6939</a>
+            </div>
         </div>
         <p class="disclaimer">
-            *Disclaimer: The $75 CAD introductory discount is valid for first-time Prince George based business clients only. 100% refund guarantee applies to the first block if unsatisfied with results. All pricing is in CAD.
+            *Disclaimer: $75 discount for new PG clients only. 100% refund guarantee if unsatisfied with work. Pricing in CAD.
         </p>
     </footer>
 
