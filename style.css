@@ -5,6 +5,7 @@
     --bg: #ffffff;
     --surface: #fcfcfc;
     --primary: #f9452d; 
+    --primary-light: #fff5f4;
     --text-main: #1a1a1a;
     --text-dim: #6c757d;
     --border-glass: rgba(0, 0, 0, 0.06);
@@ -18,7 +19,7 @@ body {
     background-color: var(--bg); 
     color: var(--text-main); 
     font-family: 'Space Grotesk', sans-serif; 
-    line-height: 2; /* Increased for breathing room */
+    line-height: 2; 
     overflow-x: hidden;
 }
 
@@ -29,7 +30,7 @@ body {
     width: 0%; z-index: 2000; 
 }
 
-/* --- Navigation (Expanded) --- */
+/* --- Navigation --- */
 nav {
     padding: 45px 12%; 
     display: flex;
@@ -68,9 +69,7 @@ nav {
 .nav-links a:hover { color: var(--primary); }
 
 /* --- Massive Spacing Layout --- */
-section { 
-    padding: 240px 12%; /* Luxury vertical breathing room */
-}
+section { padding: 240px 12%; }
 
 .section-title { 
     font-family: 'Outfit'; 
@@ -81,10 +80,8 @@ section {
     letter-spacing: -3px; 
 }
 
-/* --- Hero (Oversized) --- */
-.hero { 
-    padding: 280px 12% 220px; 
-}
+/* --- Hero --- */
+.hero { padding: 280px 12% 220px; }
 .hero-tag { 
     color: var(--primary); 
     font-size: 0.85rem; 
@@ -101,58 +98,51 @@ section {
     letter-spacing: -6px; 
     margin-bottom: 60px; 
 }
-.hero p { 
-    max-width: 750px; 
-    font-size: 1.5rem; 
-    color: var(--text-dim); 
-    margin-bottom: 80px; 
+.hero p { max-width: 750px; font-size: 1.5rem; color: var(--text-dim); margin-bottom: 80px; }
+
+/* --- Locked 3-Column Grids --- */
+.bento-grid, .pricing-grid, .stats-grid { 
+    display: grid; 
+    gap: 40px; 
 }
 
-/* --- Stats Grid (Pill Style) --- */
-.stats-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 40px; 
-    padding: 0 12% 160px; 
+@media (min-width: 1024px) {
+    .bento-grid, .pricing-grid, .stats-grid { 
+        grid-template-columns: repeat(3, 1fr) !important; 
+    }
 }
-.stat-item { 
+
+@media (max-width: 1023px) {
+    .bento-grid, .pricing-grid, .stats-grid { 
+        grid-template-columns: 1fr !important; 
+    }
+}
+
+/* --- Shared Item Styling --- */
+.stat-item, .bento-item, .price-card { 
     padding: 100px 60px; 
     background: var(--surface);
-    border-radius: 40px;
+    border-radius: 50px;
     border: 1px solid var(--border-glass);
     transition: var(--transition);
 }
-.stat-item h2 { font-size: 6.5rem; font-family: 'Outfit'; line-height: 1; margin-bottom: 15px; letter-spacing: -4px; transition: var(--transition); }
-.stat-item:hover { transform: translateY(-15px); border-color: var(--primary); background: #fff; box-shadow: 0 40px 80px rgba(0,0,0,0.06); }
-.stat-item:hover h2 { color: var(--primary); transform: scale(1.05); }
 
-/* --- Bento & Pricing (Unified High-Padding) --- */
-.bento-grid, .pricing-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
-    gap: 50px; 
-}
-
-.bento-item, .price-card { 
-    padding: 130px 80px; 
-    background: var(--surface); 
-    border-radius: 60px; 
-    transition: var(--transition); 
-    border: 1px solid var(--border-glass); 
-}
-
-.bento-item:hover, .price-card:hover { 
-    background: #fff; 
-    border-color: var(--primary); 
+.stat-item:hover, .bento-item:hover, .price-card:hover { 
     transform: translateY(-15px); 
-    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+    border-color: var(--primary); 
+    background: #fff; 
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08); 
 }
+
+.stat-item h2 { font-size: 6.5rem; font-family: 'Outfit'; line-height: 1; margin-bottom: 15px; letter-spacing: -4px; transition: var(--transition); }
+.stat-item:hover h2 { color: var(--primary); transform: scale(1.05); }
+.stat-item p { color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; }
 
 .price-card h3 { font-size: 2rem; text-transform: uppercase; margin-bottom: 40px; font-family: 'Outfit'; }
 .cost { font-size: 7.5rem; font-family: 'Outfit'; letter-spacing: -6px; margin: 40px 0; display: flex; align-items: baseline; line-height: 1; }
-.cost span { font-size: 1.3rem; margin-left: 15px; color: var(--text-dim); letter-spacing: 1px; }
+.cost span { font-size: 1.3rem; margin-left: 15px; color: var(--text-dim); }
 
-/* --- Polished Buttons --- */
+/* --- Buttons --- */
 .btn { 
     padding: 28px 64px; 
     border-radius: 100px; 
@@ -164,20 +154,14 @@ section {
     transition: var(--transition); 
     border: 1px solid var(--text-main); 
     font-size: 1rem;
+    text-align: center;
 }
 .btn-black { background: var(--text-main); color: #fff; }
 .btn-black:hover { background: transparent; color: var(--text-main); transform: translateY(-8px); }
-
-.btn-primary { 
-    background: var(--primary); 
-    color: #fff; 
-    border-color: var(--primary); 
-    width: 100%; 
-    margin-top: 50px; 
-}
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); width: 100%; margin-top: 50px; }
 .btn-primary:hover { background: var(--text-main); border-color: var(--text-main); transform: scale(1.03); }
 
-/* --- FAQ Accordions (Expanded) --- */
+/* --- FAQ --- */
 .faq-container { max-width: 1200px; margin: 0 auto; }
 details { background: var(--surface); margin-bottom: 30px; border-radius: 40px; border: 1px solid var(--border-glass); transition: var(--transition); }
 details:hover { border-color: var(--primary); background: #fff; }
@@ -186,30 +170,12 @@ summary::after { content: '+'; color: var(--primary); font-size: 2rem; transitio
 details[open] summary::after { transform: rotate(45deg); }
 .faq-content { padding: 0 70px 70px; font-size: 1.3rem; color: var(--text-dim); }
 
-/* --- Footer (Luxury Radius) --- */
-footer { 
-    padding: 200px 12% 100px; 
-    background: var(--surface); 
-    border-radius: 100px 100px 0 0; 
-}
+/* --- Footer --- */
+footer { padding: 200px 12% 100px; background: var(--surface); border-radius: 100px 100px 0 0; }
 .footer-phone { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; color: var(--primary); text-decoration: none; transition: var(--transition); display: inline-block; }
 .footer-phone:hover { transform: translateX(20px); }
+.copyright-row { margin-top: 140px; padding-top: 60px; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; color: var(--text-dim); }
 
-.copyright-row { 
-    margin-top: 140px; 
-    padding-top: 60px; 
-    border-top: 1px solid var(--border-glass); 
-    display: flex; 
-    justify-content: space-between; 
-    color: var(--text-dim);
-}
-
-/* --- Reveal States --- */
+/* --- Animations --- */
 .reveal { opacity: 0; transform: translateY(50px); transition: var(--transition); }
 .reveal.active { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 1024px) {
-    section, nav, .stats-grid, .hero { padding-left: 8%; padding-right: 8%; }
-    .hero h1 { font-size: 6rem; }
-    .bento-item, .price-card { padding: 80px 40px; }
-}
