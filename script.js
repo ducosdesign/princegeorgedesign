@@ -1,26 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const revealObserver = new IntersectionObserver((entries) => {
+    const pages = document.querySelectorAll('header, section, footer');
+    const progressBar = document.getElementById("progressBar");
+
+    // 1. Page Turn Observer
+    const pageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                if (entry.target.classList.contains('stats-grid') || entry.target.classList.contains('pricing-grid') || entry.target.classList.contains('bento-grid')) {
-                    Array.from(entry.target.children).forEach((child, i) => {
-                        setTimeout(() => child.classList.add('active'), i * 150);
-                    });
-                }
+            // If the page is above the viewport, tilt it away
+            if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+                entry.target.classList.add('page-off-screen');
+            } else {
+                entry.target.classList.remove('page-off-screen');
             }
         });
-    }, { threshold: 0.1 });
+    }, {
+        threshold: 0,
+        rootMargin: "-10% 0px -90% 0px"
+    });
 
-    document.querySelectorAll('.reveal, .stats-grid, .pricing-grid, .bento-grid').forEach(el => revealObserver.observe(el));
+    pages.forEach(page => pageObserver.observe(page));
 
-    document.querySelectorAll('.stat-item, .bento-item, .price-card').forEach(el => {
-        el.addEventListener('mousemove', (e) => {
-            const rect = el.getBoundingClientRect();
-            const rotateX = (e.clientY - rect.top - rect.height/2) / -25;
-            const rotateY = (e.clientX - rect.left - rect.width/2) / 25;
-            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
+    // 2. Progress Bar
+    window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        if (progressBar) progressBar.style.width = scrolled + "%";
+    });
+
+    // 3. Card Interactivity
+    const cards = document.querySelectorAll('.bento-item, .price-card, .stat-item');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width/2) / 20;
+            const y = (e.clientY - rect.top - rect.height/2) / -20;
+            card.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg) translateY(-10px)`;
         });
-        el.addEventListener('mouseleave', () => el.style.transform = `perspective(1000px) rotateX(0) rotateY(0) translateY(0)`);
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) translateY(0)`;
+        });
     });
 });
