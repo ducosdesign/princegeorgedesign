@@ -109,7 +109,26 @@
         .price-card:last-child { border-right: none; }
         .price-card.featured { background: #fffafa; border-top: 5px solid var(--primary); }
         .price-card h3 { font-size: 1.1rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 40px; }
-        .price-card .cost { font-size: 5rem; font-family: 'Outfit'; margin-bottom: 10px; letter-spacing: -2px; line-height: 1; }
+        
+        .price-card .cost { 
+            font-size: 5.5rem; 
+            font-family: 'Outfit'; 
+            margin-bottom: 0px; 
+            letter-spacing: -3px; 
+            line-height: 1; 
+            display: flex;
+            align-items: baseline;
+        }
+        .price-card .cost span { 
+            font-size: 1rem; 
+            color: var(--text-dim); 
+            font-family: 'Space Grotesk'; 
+            letter-spacing: 1px;
+            margin-left: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
         .price-card .hours { font-weight: 700; color: var(--primary); margin-bottom: 50px; font-size: 1.1rem; }
 
         /* --- Buttons --- */
@@ -144,6 +163,7 @@
     <nav>
         <a href="#" class="logo">PrinceGeorge<span>Design</span></a>
         <div class="nav-links">
+            <a href="#capabilities">Capabilities</a>
             <a href="#pricing">Pricing</a>
             <a href="https://shop.princegeorgedesign.com/pages/contact">Contact</a>
             <a href="tel:2363316939" style="color: var(--primary);">(236) 331-6939</a>
@@ -154,7 +174,7 @@
         <div class="animate__animated animate__fadeInLeft">
             <span class="hero-tag">Digital Design Studio</span>
             <h1>Web support <br>made local.</h1>
-            <p>Premium Shopify & WordPress maintenance for Prince George business owners. Reach out at <strong>236-331-6939</strong> or <strong>princegeorgedesign@gmail.com</strong>.</p>
+            <p>Premium Shopify & WordPress maintenance for Prince George business owners. Call/Text <strong>236-331-6939</strong> or email <strong>princegeorgedesign@gmail.com</strong>.</p>
             <a href="#pricing" class="btn btn-black">Explore Plans</a>
         </div>
     </header>
@@ -172,7 +192,7 @@
             <div class="bento-card">
                 <i class="fas fa-bolt" style="color: var(--primary); margin-bottom: 25px; font-size: 1.5rem;"></i>
                 <h3 style="text-transform: uppercase; margin-bottom: 15px;">Performance</h3>
-                <p style="color: var(--text-dim);">Custom speed optimization to ensure your store loads in under 2 seconds.</p>
+                <p style="color: var(--text-dim);">Custom speed optimization to ensure your store loads in under 2 seconds, boosting conversion.</p>
             </div>
             <div class="bento-card" style="background: var(--text-main); color: white; border: none;">
                 <i class="fas fa-mobile-alt" style="color: var(--primary); margin-bottom: 25px; font-size: 1.5rem;"></i>
@@ -182,7 +202,7 @@
             <div class="bento-card">
                 <i class="fas fa-shield-virus" style="color: var(--primary); margin-bottom: 25px; font-size: 1.5rem;"></i>
                 <h3 style="text-transform: uppercase; margin-bottom: 15px;">Security</h3>
-                <p style="color: var(--text-dim);">Proactive patches and 24/7 monitoring to protect your business data.</p>
+                <p style="color: var(--text-dim);">Proactive patches and 24/7 monitoring to protect your business and customer data.</p>
             </div>
         </div>
     </section>
@@ -195,7 +215,7 @@
         <div class="pricing-grid">
             <div class="price-card">
                 <h3>Starter Block</h3>
-                <div class="cost">$149 <span>CAD</span></div>
+                <div class="cost">149<span>CAD</span></div>
                 <div class="hours">4 Hours Professional Support</div>
                 <ul style="list-style: none; margin-bottom: 50px;">
                     <li style="margin-bottom: 18px; display: flex; align-items: center;"><i class="fas fa-square" style="color: var(--primary); margin-right: 12px; font-size: 0.7rem;"></i> Minor Fixes & Updates</li>
@@ -204,7 +224,7 @@
             </div>
             <div class="price-card featured">
                 <h3>Growth Block</h3>
-                <div class="cost">$299 <span>CAD</span></div>
+                <div class="cost">299<span>CAD</span></div>
                 <div class="hours">10 Hours Professional Support</div>
                 <ul style="list-style: none; margin-bottom: 50px;">
                     <li style="margin-bottom: 18px; display: flex; align-items: center;"><i class="fas fa-square" style="color: var(--primary); margin-right: 12px; font-size: 0.7rem;"></i> Custom Feature Dev</li>
@@ -213,7 +233,7 @@
             </div>
             <div class="price-card">
                 <h3>Scale Block</h3>
-                <div class="cost">$499 <span>CAD</span></div>
+                <div class="cost">499<span>CAD</span></div>
                 <div class="hours">20 Hours Professional Support</div>
                 <ul style="list-style: none; margin-bottom: 50px;">
                     <li style="margin-bottom: 18px; display: flex; align-items: center;"><i class="fas fa-square" style="color: var(--primary); margin-right: 12px; font-size: 0.7rem;"></i> Full Site Redesigns</li>
@@ -226,16 +246,16 @@
     <div class="intro-promo" style="background: var(--text-main); color: white; padding: 120px 8%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
         <div data-animate>
             <h2 style="font-family: 'Outfit'; font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; line-height: 1;">First Order <br><span style="color: var(--primary);">$75 OFF</span></h2>
-            <p style="margin-top: 30px; opacity: 0.8; font-size: 1.2rem; max-width: 500px;">Exclusive rate for new Prince George clients.</p>
+            <p style="margin-top: 30px; opacity: 0.8; font-size: 1.2rem; max-width: 500px;">Exclusive introductory rate for local PG business owners.</p>
         </div>
         <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-white">Claim $75 Discount</a>
     </div>
 
     <section data-animate>
-        <h2 class="section-title">FAQs</h2>
+        <h2 class="section-title">Common Questions</h2>
         <div style="max-width: 900px;">
-            <details><summary>What if I don't use all my hours?</summary><p style="padding-top: 25px; color: var(--text-dim);">Hours remain valid for 12 months from purchase.</p></details>
-            <details><summary>Why no tax?</summary><p style="padding-top: 25px; color: var(--text-dim);">As a CRA Small Supplier, I don't charge GST/PST—saving you 12% instantly.</p></details>
+            <details><summary>What if I don't use all my hours?</summary><p style="padding-top: 25px; color: var(--text-dim);">Hours remain valid for 12 months from purchase. Use them whenever you need a quick fix or a banner update.</p></details>
+            <details><summary>Why no tax charged?</summary><p style="padding-top: 25px; color: var(--text-dim);">As a CRA Small Supplier, I don't charge GST/PST—saving your business an immediate 12% on every invoice.</p></details>
         </div>
     </section>
 
@@ -243,12 +263,12 @@
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 60px;">
             <div>
                 <div class="logo">PrinceGeorge<span>Design</span></div>
-                <p style="margin-top: 25px; color: var(--text-dim); max-width: 400px;">
-                    Professional <strong>WordPress maintenance</strong>, <strong>Shopify development</strong>, and <strong>design services</strong> in <strong>Prince George, BC</strong>.
+                <p style="margin-top: 25px; color: var(--text-dim); max-width: 400px; font-size: 0.95rem;">
+                    Providing professional <strong>WordPress maintenance</strong>, <strong>Shopify development</strong>, and <strong>graphic design</strong> to businesses in <strong>Prince George, BC</strong>.
                 </p>
             </div>
             <div style="text-align: right;">
-                <p style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px;">Direct Local Line:</p>
+                <p style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px;">Connect Locally:</p>
                 <a href="tel:2363316939" style="text-decoration: none; color: var(--primary); font-weight: 800; font-size: 1.8rem;">(236) 331-6939</a>
             </div>
         </div>
