@@ -1,45 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Scroll Progress Bar
+    // 1. Scroll Progress
     const progressBar = document.getElementById("progressBar");
     window.addEventListener('scroll', () => {
         const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
         if (progressBar) progressBar.style.width = scrolled + "%";
     });
 
-    // 2. Intersection Observer Reveal
-    const revealObserver = new IntersectionObserver((entries) => {
+    // 2. Staggered Reveal Logic
+    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+                // If it's a grid, animate children with delay
+                if (entry.target.classList.contains('stagger-grid')) {
+                    const children = entry.target.children;
+                    Array.from(children).forEach((child, i) => {
+                        setTimeout(() => {
+                            child.classList.add('active');
+                        }, i * 150);
+                    });
+                } else {
+                    entry.target.classList.add('active');
+                }
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    document.querySelectorAll('.bento-item, .price-card, .stat-item, h1, .intro-promo').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(40px)";
-        el.style.transition = "all 1s cubic-bezier(0.23, 1, 0.32, 1)";
-        revealObserver.observe(el);
+    // Targets
+    document.querySelectorAll('.reveal, .bento-grid, .pricing-grid, .stats-grid').forEach(el => {
+        if(el.classList.contains('bento-grid') || el.classList.contains('pricing-grid') || el.classList.contains('stats-grid')) {
+            el.classList.add('stagger-grid');
+            // Ensure children have the reveal class
+            Array.from(el.children).forEach(child => child.classList.add('reveal'));
+        }
+        observer.observe(el);
     });
 
-    // 3. Smooth Magnetic/Tilt Interaction
-    const cards = document.querySelectorAll('.bento-item, .price-card');
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 45;
-            const rotateY = (centerX - x) / 45;
-            
-            card.style.transform = `perspective(2000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    // 3. Ultra-Smooth Tilt
+    const tiltElements = document.querySelectorAll('.bento-item, .price-card, .stat-item');
+    tiltElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width/2;
+            const y = e.clientY - rect.top - rect.height/2;
+            el.style.transform = `perspective(1000px) rotateX(${-y/30}deg) rotateY(${x/30}deg) translateY(-10px)`;
         });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(2000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
         });
     });
 });
