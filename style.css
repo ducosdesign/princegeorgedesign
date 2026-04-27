@@ -1,24 +1,21 @@
-/* --- PRINCE GEORGE DESIGN | GLOBAL STUDIO SYSTEM --- */
+/* --- PRINCE GEORGE DESIGN | POLISHED STUDIO SYSTEM --- */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Outfit:wght@800&display=swap');
 
 :root {
     --bg: #ffffff;
-    --surface: #f8f9fa;
+    --surface: #fcfcfc;
     --primary: #f9452d; 
     --primary-light: #fff5f4;
     --text-main: #1a1a1a;
     --text-dim: #6c757d;
-    --shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.03);
     --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.08);
-    --border-soft: #f1f1f1;
+    --border-glass: rgba(0, 0, 0, 0.06); /* Subtle subtle border */
     --transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* --- Reset & Base --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body { 
     background-color: var(--bg); 
     color: var(--text-main); 
@@ -27,15 +24,9 @@ body {
     line-height: 1.8;
 }
 
-/* --- Progress Indicator --- */
-#progressBar {
-    position: fixed;
-    top: 0; left: 0; height: 3px;
-    background: var(--primary);
-    width: 0%; z-index: 2000;
-}
+#progressBar { position: fixed; top: 0; left: 0; height: 3px; background: var(--primary); width: 0%; z-index: 2000; }
 
-/* --- Navigation --- */
+/* --- Polished Navigation --- */
 nav {
     padding: 30px 10%;
     display: flex;
@@ -43,9 +34,9 @@ nav {
     align-items: center;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-glass);
     position: sticky;
     top: 0; z-index: 1000;
-    transition: var(--transition);
 }
 
 .logo { 
@@ -55,8 +46,14 @@ nav {
     text-decoration: none; 
     color: var(--text-main); 
     font-weight: 800; 
+    letter-spacing: -1px;
+    transition: var(--transition);
 }
-.logo span { color: var(--primary); }
+.logo span { color: var(--primary); transition: var(--transition); display: inline-block; }
+
+/* Logo Hover Effect */
+.logo:hover { letter-spacing: 1px; }
+.logo:hover span { transform: scale(1.1) rotate(5deg); }
 
 .nav-links a { 
     margin-left: 35px; 
@@ -69,184 +66,47 @@ nav {
 }
 .nav-links a:hover { color: var(--primary); }
 
-/* --- Layout Sections --- */
+/* --- Uniform Section Spacing --- */
 section { padding: 160px 10%; }
+.section-title { font-family: 'Outfit'; font-size: clamp(2.5rem, 6vw, 4rem); text-transform: uppercase; margin-bottom: 70px; line-height: 0.9; letter-spacing: -2px; }
 
-.hero { 
-    padding: 200px 10% 160px; 
-    background: radial-gradient(circle at 90% 10%, var(--primary-light) 0%, transparent 40%);
-}
+/* --- Hero --- */
+.hero { padding: 200px 10% 160px; }
+.hero-tag { color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; margin-bottom: 30px; display: block; }
+.hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: 0.9; letter-spacing: -4px; margin-bottom: 40px; }
 
-.hero-tag { 
-    color: var(--primary); 
-    font-size: 0.85rem; 
-    text-transform: uppercase; 
-    letter-spacing: 4px; 
-    font-weight: 700; 
-    margin-bottom: 30px; 
-    display: block; 
-}
+/* --- Staggered Grid Elements --- */
+.bento-grid, .pricing-grid, .stats-grid { display: grid; gap: 30px; }
 
-.hero h1 { 
-    font-family: 'Outfit', sans-serif; 
-    font-size: clamp(3.5rem, 9vw, 7.5rem); 
-    line-height: 0.9; 
-    letter-spacing: -2px; 
-    margin-bottom: 40px; 
-}
-
-.hero p { 
-    max-width: 600px; 
-    font-size: 1.3rem; 
-    color: var(--text-dim); 
-    margin-bottom: 50px; 
-}
-
-/* --- Animated Stats Grid --- */
-.stats-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-    padding: 0 10% 100px;
-}
-
-.stat-item {
-    padding: 60px 40px;
-    border-radius: 24px;
-    transition: var(--transition);
-    cursor: default;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Color Tints */
-.tint-red { background-color: #fff5f4; }
-.tint-gray { background-color: #f8f9fa; }
-.tint-dark { background-color: #f1f1f1; }
-
-.stat-item:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: var(--shadow-hover);
-}
-
-.stat-item.tint-red:hover { background-color: #ffe8e6; }
-.stat-item.tint-gray:hover { background-color: #f1f3f5; }
-.stat-item.tint-dark:hover { background-color: #e9ecef; }
-
-.stat-item h2 { 
-    font-size: 4.5rem; 
-    font-family: 'Outfit'; 
-    color: var(--primary); 
-    margin-bottom: 5px; 
-    line-height: 1;
-    transition: var(--transition);
-}
-
-.stat-item:hover h2 { transform: scale(1.1); }
-
-.stat-item p { 
-    color: var(--text-dim); 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    font-weight: 700; 
-    font-size: 0.8rem;
-}
-
-/* --- Bento Feature Grid --- */
-.bento-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 30px; 
-}
-
-.bento-item { 
+.bento-item, .price-card, .stat-item { 
     padding: 80px 60px; 
-    background: var(--surface);
+    background: var(--surface); 
     border-radius: 30px; 
-    transition: var(--transition);
-    border: 1px solid transparent;
+    transition: var(--transition); 
+    border: 1px solid var(--border-glass); /* Subtly defined */
     position: relative;
     overflow: hidden;
 }
 
-.bento-item:hover { 
+/* Hover Effects */
+.bento-item:hover, .price-card:hover, .stat-item:hover { 
     background: #fff; 
-    box-shadow: var(--shadow); 
-    border-color: var(--primary-light); 
-    transform: translateY(-10px);
-}
-
-.bento-item.dark { background: var(--text-main); color: #fff; }
-
-.bento-item i { 
-    font-size: 2rem; 
-    color: var(--primary); 
-    margin-bottom: 30px; 
-    display: block; 
-}
-
-/* --- Pricing Blocks --- */
-.pricing-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-end; 
-    margin-bottom: 70px; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-}
-
-.pricing-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 40px; 
-}
-
-.price-card { 
-    padding: 100px 60px; 
-    border-radius: 40px; 
-    background: #fff; 
-    border: 1px solid var(--border-soft); 
-    transition: var(--transition); 
-}
-
-.price-card.featured { 
-    background: var(--primary-light); 
-    border-color: var(--primary); 
-}
-
-.price-card:hover { 
     box-shadow: var(--shadow-hover); 
-    transform: scale(1.02); 
+    border-color: var(--primary); 
+    transform: translateY(-12px); 
 }
 
-.cost { 
-    font-size: 6rem; 
-    font-family: 'Outfit'; 
-    letter-spacing: -4px; 
-    line-height: 1; 
-    display: flex; 
-    align-items: baseline; 
-}
+/* --- Specific Stats Style --- */
+.stats-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 10% 100px; }
+.stat-item h2 { font-size: 5rem; font-family: 'Outfit'; color: var(--text-main); line-height: 1; transition: var(--transition); }
+.stat-item:hover h2 { color: var(--primary); transform: scale(1.05); }
 
-.cost span { 
-    font-size: 1.2rem; 
-    color: var(--text-dim); 
-    margin-left: 10px; 
-    font-weight: 700; 
-    text-transform: uppercase;
-}
+/* --- Price Typography --- */
+.pricing-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.cost { font-size: 6rem; font-family: 'Outfit'; letter-spacing: -4px; line-height: 1; display: flex; align-items: baseline; margin: 20px 0; }
+.cost span { font-size: 1.1rem; color: var(--text-dim); margin-left: 10px; font-weight: 700; }
 
-.guarantee-badge { 
-    padding: 12px 24px; 
-    border-radius: 100px; 
-    border: 1px solid var(--primary); 
-    color: var(--primary); 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    font-size: 0.8rem; 
-}
-
-/* --- Interactive Buttons --- */
+/* --- Buttons (Advanced Hover) --- */
 .btn { 
     padding: 24px 48px; 
     border-radius: 50px; 
@@ -256,142 +116,33 @@ section { padding: 160px 10%; }
     text-decoration: none; 
     display: inline-block; 
     transition: var(--transition); 
-    text-align: center; 
+    border: 1px solid var(--text-main); 
+    position: relative;
+    z-index: 1;
 }
-
 .btn-black { background: var(--text-main); color: #fff; }
-.btn-black:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.btn-black:hover { background: transparent; color: var(--text-main); transform: translateY(-5px); box-shadow: var(--shadow-soft); }
 
-.btn-primary { background: var(--primary); color: #fff; width: 100%; margin-top: auto; }
-.btn-white { background: #fff; color: var(--text-main); }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); width: 100%; margin-top: auto; }
+.btn-primary:hover { background: var(--text-main); border-color: var(--text-main); transform: scale(1.02); }
 
-/* --- Special Promo Section --- */
-.intro-promo { 
-    background: var(--text-main); 
-    color: #fff; 
-    padding: 120px 10%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    gap: 40px; 
-    border-radius: 60px; 
-    margin: 0 5% 100px; 
-}
+/* --- FAQ Accordions --- */
+details { background: var(--surface); margin-bottom: 15px; border-radius: 24px; border: 1px solid var(--border-glass); transition: var(--transition); }
+details:hover { border-color: var(--primary); background: #fff; }
+summary { padding: 30px 40px; font-family: 'Outfit'; font-weight: 700; text-transform: uppercase; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+summary::after { content: '+'; color: var(--primary); font-size: 1.5rem; transition: var(--transition); }
+details[open] summary::after { transform: rotate(45deg); }
 
 /* --- Footer --- */
-footer { 
-    padding: 120px 10% 60px; 
-    background: var(--surface); 
-    border-radius: 60px 60px 0 0; 
-}
+footer { padding: 120px 10% 60px; background: var(--surface); border-top: 1px solid var(--border-glass); border-radius: 60px 60px 0 0; }
+.footer-phone { font-size: 2.5rem; font-weight: 800; color: var(--primary); text-decoration: none; transition: var(--transition); display: inline-block; }
+.footer-phone:hover { transform: translateX(10px); }
 
-.footer-grid { 
-    display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-    gap: 60px; 
-}
+/* Animation Classes */
+.reveal { opacity: 0; transform: translateY(30px); transition: var(--transition); }
+.reveal.active { opacity: 1; transform: translateY(0); }
 
-.footer-phone { 
-    font-size: 2.5rem; 
-    font-weight: 800; 
-    color: var(--primary); 
-    text-decoration: none; 
-    transition: var(--transition);
-}
-.footer-phone:hover { transform: scale(1.05); display: inline-block; }
-
-.copyright-row { 
-    margin-top: 80px; 
-    padding-top: 40px; 
-    border-top: 1px solid #e9ecef; 
-    display: flex; 
-    justify-content: space-between; 
-    color: var(--text-dim); 
-    font-size: 0.85rem; 
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
-    section, nav { padding-left: 5%; padding-right: 5%; }
+    section, nav { padding: 30px 5%; }
     .hero { padding-top: 140px; }
-    .hero h1 { font-size: 3.5rem; }
-    .footer-phone { font-size: 1.8rem; }
-    .intro-promo { flex-direction: column; text-align: center; margin: 0; border-radius: 0; }
-    .pricing-grid { gap: 20px; }
-    .price-card { padding: 60px 30px; }
-}
-
-/* --- FAQ Section Styling --- */
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-details {
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    border: 1px solid var(--border-soft);
-    transition: var(--transition);
-    overflow: hidden;
-}
-
-details[open] {
-    box-shadow: var(--shadow);
-    border-color: var(--primary-light);
-}
-
-summary {
-    padding: 30px 40px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    list-style: none; /* Removes default arrow */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-/* Custom Arrow Icon using FontAwesome or Unicode */
-summary::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--primary);
-    transition: var(--transition);
-}
-
-details[open] summary::after {
-    transform: rotate(45deg);
-    color: var(--text-main);
-}
-
-summary:hover {
-    background: var(--primary-light);
-    color: var(--primary);
-}
-
-.faq-content {
-    padding: 0 40px 40px;
-    color: var(--text-dim);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-    summary { padding: 20px 25px; font-size: 1rem; }
-    .faq-content { padding: 0 25px 25px; }
 }
