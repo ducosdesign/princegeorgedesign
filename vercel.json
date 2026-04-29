@@ -11,6 +11,12 @@
     { "src": "/shopify-support", "dest": "/api/shopify-support.php" },
     { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
     { "src": "/local-seo", "dest": "/api/local-seo.php" },
+    { "src": "/speed-optimization", "dest": "/api/speed-optimization.php" },
+    { "src": "/graphic-design", "dest": "/api/graphic-design.php" },
+    { "src": "/custom-development", "dest": "/api/custom-development.php" },
+    { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
+    { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
+    { "src": "/accessibility", "dest": "/api/accessibility.php" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
