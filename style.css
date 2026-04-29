@@ -27,14 +27,6 @@ body {
     overflow-x: hidden;
 }
 
-#progressBar {
-    position: fixed;
-    top: 0; left: 0; height: 5px;
-    background: var(--primary);
-    width: 0%; z-index: 9999;
-    transition: width 0.1s ease;
-}
-
 /* --- Navigation --- */
 nav {
     padding: 30px 10%;
@@ -46,18 +38,6 @@ nav {
     position: fixed;
     top: 0; width: 100%; z-index: 1000;
     border-bottom: 1px solid var(--border-glass);
-}
-
-.logo { 
-    font-family: 'Outfit'; font-size: 1.5rem; text-transform: uppercase; 
-    font-weight: 800; text-decoration: none; color: #000; 
-    letter-spacing: -1px; transition: 0.4s;
-}
-.logo span { color: var(--primary); }
-
-.nav-links a { 
-    margin-left: 35px; text-decoration: none; color: var(--text-main); 
-    font-weight: 700; font-size: 0.85rem; text-transform: uppercase; 
 }
 
 /* --- Sections --- */
@@ -74,10 +54,10 @@ header, section, footer {
 header, section:nth-of-type(even) { background-color: var(--white); }
 section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
 
-/* --- FULL PAGE PROMO FIX --- */
+/* --- FULL PAGE PROMO BREAKOUT --- */
 #promo {
     background: var(--primary);
-    min-height: 60vh;
+    min-height: 70vh;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -96,47 +76,50 @@ section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
 .promo-content {
     text-align: center;
     color: #fff;
-    max-width: 900px;
-    padding: 60px 20px;
+    max-width: 1000px;
+    padding: 80px 20px;
 }
 
 .promo-title {
     font-family: var(--font-head);
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
     opacity: 0.9;
 }
 
 .promo-main {
     font-family: var(--font-head);
-    font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 0.9;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    line-height: 1.1; /* Fixed overlap */
     letter-spacing: -3px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-weight: 800;
 }
 
 .promo-sub {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     max-width: 600px;
     margin: 0 auto;
     opacity: 0.9;
+    line-height: 1.6;
 }
 
-/* --- Hero --- */
-.hero h1 { 
-    font-family: 'Outfit'; font-size: clamp(3.5rem, 10vw, 7.5rem); 
-    line-height: 0.85; letter-spacing: -4px; margin-bottom: 30px; 
+/* --- UI Elements --- */
+.hero-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
 }
-.hero p { max-width: 650px; font-size: 1.3rem; color: var(--text-dim); margin-bottom: 40px; }
 
 .section-title {
     font-family: 'Outfit';
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1;
     letter-spacing: -2px;
-    margin-bottom: 40px;
 }
 
 /* --- Grids --- */
@@ -153,48 +136,27 @@ section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid var(--border-glass);
     transition: var(--transition);
-    display: flex;
-    flex-direction: column;
 }
 
-.bento-item { min-height: 350px; justify-content: flex-start; }
-
-.stat-item:hover, .bento-item:hover, .price-card:hover {
-    background: #fff; transform: translateY(-10px);
-    border-color: var(--primary); box-shadow: 0 30px 60px rgba(0,0,0,0.05);
-}
-
-/* --- Icon Consistency Fix --- */
+/* --- Icons --- */
 .bento-item i {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     height: 50px;
     font-size: 2.5rem;
     color: var(--primary);
     margin-bottom: 25px;
 }
 
-/* --- Pricing UI --- */
-.cost { font-size: 6rem; font-family: 'Outfit'; letter-spacing: -4px; line-height: 1; margin: 30px 0; display: flex; align-items: baseline; }
-.cost span { font-size: 1.2rem; margin-left: 10px; color: var(--text-dim); }
-
-.btn { padding: 22px 48px; border-radius: 100px; font-weight: 700; text-transform: uppercase; text-decoration: none; display: inline-block; transition: 0.3s; border: 1px solid #000; cursor: pointer; text-align: center; }
+/* --- Buttons --- */
+.btn { padding: 22px 48px; border-radius: 100px; font-weight: 700; text-transform: uppercase; text-decoration: none; display: inline-block; transition: 0.3s; border: 1px solid #000; text-align: center; }
 .btn-black { background: #000; color: #fff; }
 .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); width: 100%; }
-.btn-white { background: #fff !important; color: var(--primary) !important; border: none !important; }
+.btn-white { background: #fff !important; color: var(--primary) !important; border: none !important; font-weight: 800; }
 
-/* --- Footer --- */
-.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-.footer-phone { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--primary); text-decoration: none; }
-.copyright-row { margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-dim); }
+.btn:hover { transform: scale(1.05); }
 
-/* --- Animations --- */
-.reveal { opacity: 0; transform: translateY(40px); transition: var(--transition); }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
+/* --- Mobile Fixes --- */
 @media (max-width: 768px) {
     header, section { scroll-snap-align: none; min-height: auto; padding: 100px 8%; }
-    .nav-links { display: none; }
     #promo { margin-left: 0; margin-right: 0; left: 0; right: 0; width: 100%; }
 }
