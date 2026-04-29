@@ -1,5 +1,4 @@
-<?php include '../header.php'; ?>
-
+<?php include __DIR__ . '/../header.php'; ?>
     <header class="hero">
         <span class="hero-tag reveal">Digital Support Studio</span>
         <h1 class="reveal">Web support <br>made local.</h1>
@@ -71,4 +70,4 @@
         </div>
     </section>
 
-<?php include '../footer.php'; ?>
+<?php include __DIR__ . '/../footer.php'; ?>
