@@ -88,20 +88,29 @@
     </section>
 
     <section id="pricing">
-        <h2 class="section-title reveal">Pricing</h2>
+        <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+            <span class="hero-tag">Transparent Plans</span>
+            <h2 class="section-title">Pricing</h2>
+        </div>
+    
         <div class="pricing-grid">
+            <!-- Starter Plan -->
             <div class="price-card reveal">
                 <h3>Starter</h3>
                 <div class="cost">149<span>CAD</span></div>
                 <p>4 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
-            <div class="price-card reveal" style="border: 2px solid var(--primary);">
+    
+            <!-- Growth Plan (Featured) -->
+            <div class="price-card reveal featured">
                 <h3>Growth</h3>
                 <div class="cost">299<span>CAD</span></div>
                 <p>10 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
+    
+            <!-- Scale Plan -->
             <div class="price-card reveal">
                 <h3>Scale</h3>
                 <div class="cost">499<span>CAD</span></div>
