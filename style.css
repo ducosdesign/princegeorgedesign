@@ -107,10 +107,10 @@ section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
     margin-bottom: 40px; 
 }
 
-/* --- FULL PAGE PROMO --- */
+/* --- FULL SCREEN PROMO FIX --- */
 #promo {
     background: var(--primary);
-    min-height: 70vh;
+    min-height: 100vh; /* Force section to take up the full screen height */
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -120,8 +120,9 @@ section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
     margin-left: -50vw;
     margin-right: -50vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;    /* Horizontal centering */
+    justify-content: center; /* Vertical centering */
     overflow: hidden;
     scroll-snap-align: start;
     z-index: 1;
@@ -131,15 +132,18 @@ section:nth-of-type(odd), footer { background-color: var(--dirty-white); }
     text-align: center;
     color: #fff;
     max-width: 1000px;
-    padding: 80px 20px;
+    padding: 20px; /* Padding for mobile safety */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .promo-main {
     font-family: var(--font-head);
-    font-size: clamp(3.5rem, 10vw, 7rem);
-    line-height: 1.1;
-    letter-spacing: -3px;
-    margin-bottom: 25px;
+    font-size: clamp(3.5rem, 10vw, 8rem); /* Massive scale for full-page impact */
+    line-height: 1.05; 
+    letter-spacing: -4px;
+    margin-bottom: 30px;
     font-weight: 800;
 }
 
