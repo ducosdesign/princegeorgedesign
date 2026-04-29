@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.7.0"
+    }
+  },
+  "routes": [
+    { "src": "/how-it-works", "dest": "/how-it-works.php" },
+    { "src": "/faq", "dest": "/faq.php" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
