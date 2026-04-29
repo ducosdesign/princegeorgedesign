@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top of header.php inside <body> -->
     <div id="progressBar"></div>
+    
     <nav>
         <a href="/" class="logo">PrinceGeorge<span>Design</span></a>
         <div class="nav-links">
-            <!-- Removed .php from these links -->
-            <a href="/how-it-works">How It Works</a>
+            <a href="/#capabilities">How it works</a>
             <a href="/faq">FAQ</a>
             <a href="/#pricing">Pricing</a>
-            <a href="tel:2363316939" style="color: var(--primary); font-weight: 800;">(236) 331-6939</a>
+            <a href="tel:2363316939" class="nav-phone">(236) 331-6939</a>
         </div>
     </nav>
