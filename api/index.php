@@ -9,12 +9,15 @@
         </div>
     </header>
 
-    <!-- NEW: Promo Section -->
-    <section id="promo" class="reveal" style="margin-top: 40px;">
-        <div style="background: var(--primary); color: #fff; padding: 60px; border-radius: 32px; text-align: center;">
-            <h2 style="color: #fff; margin-bottom: 10px; font-family: var(--font-head);">Spring Launch Special</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px;">Get 20% off your first month of "Growth" or "Scale" plans. Use code <strong>PG-LOCAL</strong> at checkout.</p>
-            <a href="#pricing" class="btn" style="background: #fff; color: var(--primary); font-weight: 700;">View Plans</a>
+    <!-- FULL-WIDTH PROMO SECTION -->
+    <section id="promo" class="reveal">
+        <div class="promo-content">
+            <h2 class="promo-title">Local Business Kickstart</h2>
+            <p class="promo-main">$75 OFF Your First Order</p>
+            <p class="promo-sub">Discount is automatically applied at checkout for all first-time Prince George partners.</p>
+            <div style="margin-top: 40px;">
+                <a href="#pricing" class="btn btn-white">Claim Your Discount</a>
+            </div>
         </div>
     </section>
 
@@ -53,26 +56,28 @@
         </div>
     </section>
 
-    <!-- NEW: Trust / Why Us Section -->
-    <section id="trust-details" style="padding: 80px 0;">
-        <div class="reveal" style="margin-bottom: 60px;">
+    <!-- TRUST / WHY US SECTION -->
+    <section id="trust-details">
+        <div class="reveal">
             <span class="hero-tag">Why Us</span>
-            <h2 class="section-title" style="text-align: left; margin-left: 0;">Support that actually <br><span>understands</span> your business.</h2>
+            <h2 class="section-title">Support that actually <br><span>understands</span> your business.</h2>
         </div>
 
         <div class="bento-grid">
             <div class="bento-item reveal">
-                <i class="fa-solid fa-clock-rotate-left" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-clock-rotate-left"></i>
                 <h3>No Tickets.</h3>
                 <p>Skip the help-desk queues. You get a direct line to a developer who knows your site's history and setup.</p>
             </div>
+            
             <div class="bento-item reveal">
-                <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-shield-halved"></i>
                 <h3>Safe Updates.</h3>
                 <p>We never "auto-update" and hope for the best. Every plugin update is tested in a staging environment first.</p>
             </div>
+            
             <div class="bento-item reveal">
-                <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <i class="fa-solid fa-map-location-dot"></i>
                 <h3>PG Local.</h3>
                 <p>We aren't a giant agency in another time zone. We're right here in Prince George, working when you work.</p>
             </div>
@@ -82,21 +87,18 @@
     <section id="pricing">
         <h2 class="section-title reveal">Pricing</h2>
         <div class="pricing-grid">
-            <!-- Starter -->
             <div class="price-card reveal">
                 <h3>Starter</h3>
                 <div class="cost">149<span>CAD</span></div>
                 <p>4 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
-            <!-- Growth -->
             <div class="price-card reveal" style="border: 2px solid var(--primary);">
                 <h3>Growth</h3>
                 <div class="cost">299<span>CAD</span></div>
                 <p>10 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
-            <!-- Scale -->
             <div class="price-card reveal">
                 <h3>Scale</h3>
                 <div class="cost">499<span>CAD</span></div>
