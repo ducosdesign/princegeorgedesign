@@ -35,10 +35,9 @@
         <div class="footer-col">
             <h4 style="margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Company</h4>
             <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><a href="/why-us" style="text-decoration: none; color: #444; font-weight: 600;">Why Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="/how-it-works" style="text-decoration: none; color: #444;">How It Works</a></li>
+                <li style="margin-bottom: 10px;"><a href="/about" style="text-decoration: none; color: #444;">About Us</a></li>
+                <li style="margin-bottom: 10px;"><a href="/why-us" style="text-decoration: none; color: #444;">Why Us</a></li>
                 <li style="margin-bottom: 10px;"><a href="/faq" style="text-decoration: none; color: #444;">FAQ</a></li>
-                <li style="margin-bottom: 10px;"><a href="/emergency-support" style="text-decoration: none; color: #d93025; font-weight: 600;">Emergency Fix</a></li>
             </ul>
         </div>
     </div>
