@@ -18,6 +18,7 @@
     { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
     { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
     { "src": "/accessibility", "dest": "/api/accessibility.php" },
+    { "src": "/it-administration", "dest": "/api/it-admin.php" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
