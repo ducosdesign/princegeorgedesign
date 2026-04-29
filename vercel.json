@@ -8,6 +8,7 @@
     { "src": "/", "dest": "/api/index.php" },
     { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
     { "src": "/faq", "dest": "/api/faq.php" },
+    { "src": "/why-us", "dest": "/api/why-us.php" },
     { "src": "/shopify-support", "dest": "/api/shopify-support.php" },
     { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
     { "src": "/local-seo", "dest": "/api/local-seo.php" },
