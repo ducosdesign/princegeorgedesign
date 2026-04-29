@@ -15,7 +15,7 @@
     <nav>
         <a href="/" class="logo">PrinceGeorge<span>Design</span></a>
         <div class="nav-links">
-            <a href="/#capabilities">How it works</a>
+            <a href="/how-it-works">How it works</a>
             <a href="/faq">FAQ</a>
             <a href="/#pricing">Pricing</a>
             <a href="tel:2363316939" class="nav-phone">(236) 331-6939</a>
