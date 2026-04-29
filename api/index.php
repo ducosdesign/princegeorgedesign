@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../header.php'; ?>
 
     <header class="hero">
         <span class="hero-tag reveal">Digital Support Studio</span>
@@ -71,4 +71,4 @@
         </div>
     </section>
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
