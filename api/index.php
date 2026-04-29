@@ -1,4 +1,5 @@
 <?php include __DIR__ . '/../header.php'; ?>
+
     <header class="hero">
         <span class="hero-tag reveal">Digital Support Studio</span>
         <h1 class="reveal">Web support <br>made local.</h1>
@@ -8,17 +9,26 @@
         </div>
     </header>
 
+    <!-- NEW: Promo Section -->
+    <section id="promo" class="reveal" style="margin-top: 40px;">
+        <div style="background: var(--primary); color: #fff; padding: 60px; border-radius: 32px; text-align: center;">
+            <h2 style="color: #fff; margin-bottom: 10px; font-family: var(--font-head);">Spring Launch Special</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px;">Get 20% off your first month of "Growth" or "Scale" plans. Use code <strong>PG-LOCAL</strong> at checkout.</p>
+            <a href="#pricing" class="btn" style="background: #fff; color: var(--primary); font-weight: 700;">View Plans</a>
+        </div>
+    </section>
+
     <section id="stats">
         <div class="stats-grid">
-            <div class="stat-item">
+            <div class="stat-item reveal">
                 <h2>100%</h2>
                 <p>Refund Guarantee</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item reveal">
                 <h2>24h</h2>
                 <p>Response Time</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item reveal">
                 <h2>CAD</h2>
                 <p>Local Pricing</p>
             </div>
@@ -28,17 +38,43 @@
     <section id="capabilities">
         <h2 class="section-title reveal">Beyond the <span style="color: var(--primary);">basics.</span></h2>
         <div class="bento-grid">
-            <div class="bento-item">
+            <div class="bento-item reveal">
                 <h3>Performance</h3>
                 <p>Custom speed optimization to ensure your store loads in under 2 seconds for a better customer experience.</p>
             </div>
-            <div class="bento-item">
+            <div class="bento-item reveal">
                 <h3>Mobile First</h3>
                 <p>Flawless shopping experiences designed specifically for the 250 area's high-traffic mobile users.</p>
             </div>
-            <div class="bento-item">
+            <div class="bento-item reveal">
                 <h3>Security</h3>
                 <p>Proactive patches and 24/7 monitoring to protect your business data and customer transactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Trust / Why Us Section -->
+    <section id="trust-details" style="padding: 80px 0;">
+        <div class="reveal" style="margin-bottom: 60px;">
+            <span class="hero-tag">Why Us</span>
+            <h2 class="section-title" style="text-align: left; margin-left: 0;">Support that actually <br><span>understands</span> your business.</h2>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-item reveal">
+                <i class="fa-solid fa-clock-rotate-left" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>No Tickets.</h3>
+                <p>Skip the help-desk queues. You get a direct line to a developer who knows your site's history and setup.</p>
+            </div>
+            <div class="bento-item reveal">
+                <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>Safe Updates.</h3>
+                <p>We never "auto-update" and hope for the best. Every plugin update is tested in a staging environment first.</p>
+            </div>
+            <div class="bento-item reveal">
+                <i class="fa-solid fa-map-location-dot" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3>PG Local.</h3>
+                <p>We aren't a giant agency in another time zone. We're right here in Prince George, working when you work.</p>
             </div>
         </div>
     </section>
@@ -47,21 +83,21 @@
         <h2 class="section-title reveal">Pricing</h2>
         <div class="pricing-grid">
             <!-- Starter -->
-            <div class="price-card">
+            <div class="price-card reveal">
                 <h3>Starter</h3>
                 <div class="cost">149<span>CAD</span></div>
                 <p>4 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
             <!-- Growth -->
-            <div class="price-card">
+            <div class="price-card reveal" style="border: 2px solid var(--primary);">
                 <h3>Growth</h3>
                 <div class="cost">299<span>CAD</span></div>
                 <p>10 Hours of Support</p>
                 <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" target="_blank" class="btn btn-primary">Buy Now</a>
             </div>
             <!-- Scale -->
-            <div class="price-card">
+            <div class="price-card reveal">
                 <h3>Scale</h3>
                 <div class="cost">499<span>CAD</span></div>
                 <p>20 Hours of Support</p>
