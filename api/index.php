@@ -62,6 +62,7 @@
         </div>
     </section>
 
+    <!-- TRUST / WHY US SECTION -->
     <section id="trust-details">
         <div class="reveal">
             <span class="hero-tag">Why Us</span>
@@ -69,16 +70,21 @@
         </div>
 
         <div class="bento-grid">
+            <!-- Item 1 -->
             <div class="bento-item reveal">
                 <i class="fa-solid fa-clock-rotate-left"></i>
                 <h3>No Tickets.</h3>
                 <p>Skip the help-desk queues. You get a direct line to a developer who knows your site's history and setup.</p>
             </div>
+            
+            <!-- Item 2 - ICON ADDED HERE -->
             <div class="bento-item reveal">
                 <i class="fa-solid fa-shield-halved"></i>
                 <h3>Safe Updates.</h3>
                 <p>We never "auto-update" and hope for the best. Every plugin update is tested in a staging environment first.</p>
             </div>
+            
+            <!-- Item 3 -->
             <div class="bento-item reveal">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <h3>Local Support.</h3>
