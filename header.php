@@ -10,13 +10,13 @@
 </head>
 <body>
     <div id="progressBar"></div>
-
     <nav>
-        <a href="index.php" class="logo">PrinceGeorge<span>Design</span></a>
+        <a href="/" class="logo">PrinceGeorge<span>Design</span></a>
         <div class="nav-links">
-            <a href="how-it-works.php">How It Works</a>
-            <a href="faq.php">FAQ</a>
-            <a href="index.php#pricing">Pricing</a>
+            <!-- Removed .php from these links -->
+            <a href="/how-it-works">How It Works</a>
+            <a href="/faq">FAQ</a>
+            <a href="/#pricing">Pricing</a>
             <a href="tel:2363316939" style="color: var(--primary); font-weight: 800;">(236) 331-6939</a>
         </div>
     </nav>
