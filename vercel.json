@@ -9,8 +9,5 @@
     { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
     { "src": "/faq", "dest": "/api/faq.php" },
     { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "projectSettings": {
-    "nodeVersion": "20.x"
-  }
+  ]
 }
