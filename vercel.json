@@ -6,6 +6,7 @@
   },
   "routes": [
     { "src": "/", "dest": "/api/index.php" },
+    { "src": "/about", "dest": "/api/about.php" },
     { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
     { "src": "/faq", "dest": "/api/faq.php" },
     { "src": "/why-us", "dest": "/api/why-us.php" },
