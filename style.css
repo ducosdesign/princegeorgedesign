@@ -1,46 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Outfit:wght@800&display=swap');
-
 :root {
-    --primary: #f9452d;
-    --font-main: 'Space Grotesk', sans-serif;
-    --font-head: 'Outfit', sans-serif;
+    --bg: #ffffff;
+    --text: #0a0a0a;
+    --accent: #0066ff;
+    --gray: #f5f5f7;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-html { 
-    background: #fff; 
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory; 
-}
+/* Navigation */
+.navbar { padding: 30px 0; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 700; font-size: 1.4rem; text-decoration: none; color: var(--text); letter-spacing: -1px; }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; }
 
-body { font-family: var(--font-main); color: #1a1a1a; line-height: 1.6; }
+/* Hero */
+.hero { padding: 120px 0; }
+.hero h1 { font-size: clamp(3rem, 8vw, 5rem); line-height: 1; letter-spacing: -2px; margin-bottom: 24px; }
+.hero p { font-size: 1.25rem; color: #666; max-width: 600px; margin-bottom: 40px; }
 
-/* Animation Engine */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Buttons */
+.btn { padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
+.btn-primary { background: var(--text); color: white; }
+.btn-secondary { border: 1px solid #ddd; color: var(--text); margin-left: 15px; }
 
-/* --- Mobile Fixes (Critical) --- */
-@media (max-width: 768px) {
-    html { scroll-snap-type: none !important; }
-    
-    header.hero { 
-        padding-top: 150px !important; 
-        min-height: auto !important;
-    }
-    
-    .reveal { 
-        opacity: 1 !important; 
-        transform: none !important; 
-    }
-    
-    /* Contact Split Fix */
-    .contact-page-static { grid-template-columns: 1fr !important; }
-}
+/* Footer */
+.site-footer { padding: 60px 0; border-top: 1px solid var(--gray); margin-top: 100px; font-size: 0.85rem; }
+.footer-content { display: flex; justify-content: space-between; color: #888; }
+.footer-links a { margin-left: 20px; color: #888; text-decoration: none; }
