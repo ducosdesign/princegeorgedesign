@@ -1,53 +1,61 @@
-<footer style="padding: 80px 5% 40px; background: #fff; border-top: 1px solid #eee;">
-    <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
-        <div class="footer-col">
-            <a href="/" class="logo" style="font-size: 1.5rem; font-weight: 700; text-decoration: none; color: #000;">PrinceGeorge<span style="color: var(--primary);">Design</span></a>
-            <p style="margin-top: 20px; color: var(--text-dim); line-height: 1.6;">
-                Premium web support and digital maintenance for businesses in Northern BC.
-            </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <img src="/PG-icon.png" alt="" class="logo-img" />
+                    <span class="logo-text"><?php echo $site_name; ?></span>
+                </a>
+                <p>Premium web support and digital maintenance for businesses in Northern BC.</p>
+                <a href="mailto:<?php echo $contact_email; ?>" class="footer-email"><?php echo $contact_email; ?></a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Platform Support</h4>
+                <ul>
+                    <li><a href="/shopify-support">Shopify Support</a></li>
+                    <li><a href="/wordpress-maintenance">WordPress Maintenance</a></li>
+                    <li><a href="/theme-migration">Theme Migration</a></li>
+                    <li><a href="/emergency-support">Emergency Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Optimization</h4>
+                <ul>
+                    <li><a href="/speed-optimization">Speed Optimization</a></li>
+                    <li><a href="/local-seo">Local SEO</a></li>
+                    <li><a href="/accessibility">Accessibility</a></li>
+                    <li><a href="/it-admin">IT Admin</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Studio</h4>
+                <ul>
+                    <li><a href="/custom-development">Custom Development</a></li>
+                    <li><a href="/graphic-design">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/why-us">Why us</a></li>
+                    <li><a href="/how-it-works">How it works</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Column 1: Core Services (UPDATED) -->
-        <div class="footer-col">
-            <h4 style="margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Platform Support</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><a href="/shopify-support" style="text-decoration: none; color: #444;">Shopify Support</a></li>
-                <li style="margin-bottom: 10px;"><a href="/wordpress-maintenance" style="text-decoration: none; color: #444;">WordPress Maintenance</a></li>
-                <!-- NEW LINK -->
-                <li style="margin-bottom: 10px;"><a href="/it-administration" style="text-decoration: none; color: #444; font-weight: 600; border-left: 2px solid var(--primary); padding-left: 8px;">Managed IT Admin</a></li>
-                <li style="margin-bottom: 10px;"><a href="/theme-migration" style="text-decoration: none; color: #444;">Theme Migrations</a></li>
-                <li style="margin-bottom: 10px;"><a href="/custom-development" style="text-decoration: none; color: #444;">Custom Development</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <span>© <?php echo date('Y'); ?> <?php echo $site_name; ?>. Made in BC.</span>
+            <span class="footer-badge">Available · Accepting new partners</span>
         </div>
+    </footer>
 
-        <!-- Column 2: Optimization -->
-        <div class="footer-col">
-            <h4 style="margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Optimization</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><a href="/speed-optimization" style="text-decoration: none; color: #444;">Speed Optimization</a></li>
-                <li style="margin-bottom: 10px;"><a href="/local-seo" style="text-decoration: none; color: #444;">Local SEO</a></li>
-                <li style="margin-bottom: 10px;"><a href="/graphic-design" style="text-decoration: none; color: #444;">Graphic Design</a></li>
-                <li style="margin-bottom: 10px;"><a href="/accessibility" style="text-decoration: none; color: #444;">Accessibility (WCAG)</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3: Company -->
-        <div class="footer-col">
-            <h4 style="margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Company</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><a href="/about" style="text-decoration: none; color: #444;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="/why-us" style="text-decoration: none; color: #444;">Why Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="/faq" style="text-decoration: none; color: #444;">FAQ</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-        <p style="color: var(--text-dim); font-size: 0.9rem;">&copy; <?php echo date("Y"); ?> Prince George Design. Made in BC.</p>
-        <a href="tel:2363316939" style="font-weight: 700; color: #000; text-decoration: none;">(236) 331-6939</a>
-    </div>
-</footer>
-
-<script src="/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
