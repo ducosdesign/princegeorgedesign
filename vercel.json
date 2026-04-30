@@ -7,7 +7,6 @@
   "routes": [
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
-    { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
     { "src": "/(.*).php", "dest": "/api/$1.php" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
