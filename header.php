@@ -10,14 +10,15 @@
 </head>
 <body>
     <!-- Top of header.php inside <body> -->
-    <div id="progressBar"></div>
-    
+<div id="progressBar"></div>
+
     <nav>
         <a href="/" class="logo">PrinceGeorge<span>Design</span></a>
         <div class="nav-links">
-            <a href="/how-it-works">How it works</a>
+            <a href="/#capabilities">How it works</a>
             <a href="/faq">FAQ</a>
             <a href="/#pricing">Pricing</a>
-            <a href="tel:2363316939" class="nav-phone">(236) 331-6939</a>
+            <!-- Professional Email Contact -->
+            <a href="mailto:contact@princegeorgedesign.com" class="nav-phone">contact@princegeorgedesign.com</a>
         </div>
     </nav>
