@@ -3,7 +3,7 @@
     <header class="hero">
         <span class="hero-tag reveal">Digital Support Studio</span>
         <h1 class="reveal">Web support <br>made local.</h1>
-        <p class="reveal">Premium Shopify & WordPress maintenance for Prince George business owners. Email <a href="mailto:contact@princegeorgedesign.com" class="btn btn-black">contact@princegeorgedesign.com</a>.</p>
+        <p class="reveal">Premium Shopify & WordPress maintenance for Prince George business owners. Email contact@princegeorgedesign.com</p>
         <div class="reveal" style="margin-top: 40px;">
             <a href="#pricing" class="btn btn-black">Explore Plans</a>
         </div>
