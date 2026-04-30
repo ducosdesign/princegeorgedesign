@@ -62,3 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Check screen width
+const isMobile = window.innerWidth < 768;
+
+if (!isMobile) {
+    // Only initialize complex animations if NOT on mobile
+    // Example: GSAP.to(".reveal", { opacity: 1, stagger: 0.2 });
+} else {
+    // Optionally: Add a class to the body to help with styling
+    document.body.classList.add('is-mobile');
+}
