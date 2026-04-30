@@ -21,9 +21,8 @@
             <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #008000;">Ready for Projects</span>
         </div>
     
-        <div class="nav-links" style="display: flex; gap: 30px; align-items: center;">
-            <a href="/about" style="text-decoration: none; color: #444; font-size: 0.9rem;">About</a>
-            <a href="/contact" style="text-decoration: none; color: #444; font-size: 0.9rem;">Contact</a>
-            <a href="mailto:contact@princegeorgedesign.com" style="background: #000; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.8rem;">Email Studio</a>
+        <div class="nav-links" style="display: flex; gap: 40px; align-items: center;">
+            <a href="/about" style="text-decoration: none; color: #000; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">About</a>
+            <a href="/contact" style="text-decoration: none; color: #000; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Contact</a>
         </div>
     </nav>
