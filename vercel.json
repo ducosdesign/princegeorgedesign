@@ -20,6 +20,7 @@
     { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
     { "src": "/accessibility", "dest": "/api/accessibility.php" },
     { "src": "/it-administration", "dest": "/api/it-admin.php" },
+    { "src": "/contact", "dest": "/api/contact.php" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
