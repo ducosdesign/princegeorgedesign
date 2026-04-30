@@ -12,13 +12,18 @@
     <!-- Top of header.php inside <body> -->
 <div id="progressBar"></div>
 
-    <nav>
-        <a href="/" class="logo">PrinceGeorge<span>Design</span></a>
-        <div class="nav-links">
-            <a href="/#capabilities">How it works</a>
-            <a href="/faq">FAQ</a>
-            <a href="/#pricing">Pricing</a>
-            <!-- Professional Email Contact -->
-            <a href="mailto:contact@princegeorgedesign.com" class="nav-phone">contact@princegeorgedesign.com</a>
+   <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;">
+        <a href="/" class="logo" style="font-family: 'Outfit'; font-weight: 800; text-transform: uppercase; text-decoration: none; color: #000;">PrinceGeorge<span style="color: #f9452d;">Design</span></a>
+        
+        <!-- Live Status -->
+        <div class="status-indicator" style="display: flex; align-items: center; gap: 8px; background: rgba(0,255,0,0.1); padding: 5px 12px; border-radius: 20px;">
+            <span class="status-dot" style="width: 8px; height: 8px; background: #00ff00; border-radius: 50%;"></span>
+            <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #008000;">Ready for Projects</span>
+        </div>
+    
+        <div class="nav-links" style="display: flex; gap: 30px; align-items: center;">
+            <a href="/about" style="text-decoration: none; color: #444; font-size: 0.9rem;">About</a>
+            <a href="/contact" style="text-decoration: none; color: #444; font-size: 0.9rem;">Contact</a>
+            <a href="mailto:contact@princegeorgedesign.com" style="background: #000; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.8rem;">Email Studio</a>
         </div>
     </nav>
