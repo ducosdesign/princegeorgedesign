@@ -1,33 +1,43 @@
-<?php
-include_once(__DIR__ . '/../header.php');
-?>
+<?php include_once(__DIR__ . '/../header.php'); ?>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="container">
-        <h1>High-End Design <br>for Local Leaders.</h1>
-        <p>Specializing in web development, local SEO, and graphic design in Prince George.</p>
-        <div class="cta-group">
-            <a href="/contact.php" class="btn btn-primary">Start a Project</a>
-            <a href="/how-it-works.php" class="btn btn-secondary">Our Process</a>
-        </div>
+  <div class="hero-tag">Digital Support Studio</div>
+  <div class="hero-scroll-tags">
+    <span class="hero-scroll-tag">Shopify</span>
+    <span class="hero-scroll-tag">WordPress</span>
+    <span class="hero-scroll-tag">Local BC</span>
+  </div>
+  <div class="hero-eyebrow">Web support made local</div>
+  <h1>Premium support<br>for <em>Northern BC</em><br>businesses.</h1>
+  <div class="hero-bottom">
+    <p class="hero-desc">
+      Shopify &amp; WordPress maintenance for <strong>Prince George business owners</strong>.
+      Local pricing, direct developer access, no tickets.
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-accent">Explore Plans →</a>
+      <a href="mailto:contact@princegeorgedesign.com" class="btn btn-outline">Email Us</a>
     </div>
+  </div>
 </section>
 
-<section class="services-preview">
-    <div class="container grid">
-        <div class="service-card">
-            <h3>Local SEO</h3>
-            <p>Get found where it matters most.</p>
-            <a href="/local-seo.php">Learn More →</a>
-        </div>
-        <div class="service-card">
-            <h3>Graphic Design</h3>
-            <p>Visual identities that stick.</p>
-            <a href="/graphic-design.php">Learn More →</a>
-        </div>
-    </div>
-</section>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <?php for($i=0; $i<2; $i++): ?>
+    <span class="ticker-item">Shopify Experts</span>
+    <span class="ticker-item">WordPress Maintenance</span>
+    <span class="ticker-item">Speed Optimization</span>
+    <span class="ticker-item">Local SEO</span>
+    <span class="ticker-item">24h Response</span>
+    <span class="ticker-item">100% Refund Guarantee</span>
+    <span class="ticker-item">CAD Pricing</span>
+    <span class="ticker-item">Prince George, BC</span>
+    <?php endfor; ?>
+  </div>
+</div>
 
-<?php
-include_once(__DIR__ . '/../footer.php');
-?>
+<!-- Add the rest of your HTML sections (Promo, Stats, Features, Pricing, etc.) here -->
+
+<?php include_once(__DIR__ . '/../footer.php'); ?>
