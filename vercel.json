@@ -8,7 +8,24 @@
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
     { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
-    { "src": "/(services|how-it-works|faq|about|contact)", "dest": "/api/$1.php" },
+    /* 
+       1. Specific pages must come first. 
+       The $1 captures the name (e.g., how-it-works) and 
+       maps it to /api/how-it-works.php 
+    */
+    { 
+      "src": "/(services|how-it-works|faq|about|contact)", 
+      "dest": "/api/$1.php" 
+    },
+    /* 
+       2. Root mapping.
+       Ensures that princegeorgedesign.com/ goes to index.php
+    */
+    { "src": "/$", "dest": "/api/index.php" },
+    /* 
+       3. Catch-all fallback.
+       This must be LAST. It handles anything not matched above.
+    */
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
