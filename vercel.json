@@ -4,11 +4,11 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/api/index.php" },
-    { "source": "/services", "destination": "/api/services.php" },
-    { "source": "/how-it-works", "destination": "/api/how-it-works.php" },
-    { "source": "/faq", "destination": "/api/faq.php" }
+  "routes": [
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
+    { "src": "/(services|how-it-works|faq|about|contact)", "dest": "/api/$1.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
