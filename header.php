@@ -23,7 +23,7 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="/how-it-works.php">How it works</a></li>
+            <li><a href="/how-it-works">How it works</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/index.php#pricing">Pricing</a></li>
             <li><a href="/faq">FAQ</a></li>
@@ -41,6 +41,6 @@
 <div class="mobile-nav" id="mobileNav">
     <a href="/how-it-works" onclick="closeMobileNav()">How it works</a>
     <a href="/index.php#pricing" onclick="closeMobileNav()">Pricing</a>
-    <a href="/index.php#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="/faq" onclick="closeMobileNav()">FAQ</a>
     <a href="mailto:contact@princegeorgedesign.com" class="mob-phone">contact@princegeorgedesign.com</a>
 </div>
