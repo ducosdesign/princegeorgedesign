@@ -10,6 +10,7 @@
     { "src": "/(.*).php", "dest": "/api/$1.php" },
     { "src": "/(.*)", "dest": "/api/index.php" },
     { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
+    { "src": "/services", "dest": "/api/services.php" },
     { "src": "/faq", "dest": "/api/faq.php" }
   ]
 }
