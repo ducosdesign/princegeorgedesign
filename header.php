@@ -12,21 +12,34 @@
 <body>
 
 <nav id="navbar">
-    <a href="/" class="nav-logo">Prince George Design</a>
-    <ul class="nav-links">
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
-    </ul>
-    <a href="mailto:contact@princegeorgedesign.com" class="nav-phone">contact@princegeorgedesign.com</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="/" class="nav-logo">Prince George Design</a>
+            <!-- New Status Badge -->
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                READY FOR PROJECTS
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/how-it-works.php">How it works</a></li>
+            <li><a href="/index.php#pricing">Pricing</a></li>
+            <li><a href="/index.php#faq">FAQ</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="mailto:contact@princegeorgedesign.com" class="nav-phone">contact@princegeorgedesign.com</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
 </nav>
 
 <div class="mobile-nav" id="mobileNav">
-    <a href="#how-it-works" onclick="closeMobileNav()">How it works</a>
-    <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
-    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="/how-it-works" onclick="closeMobileNav()">How it works</a>
+    <a href="/index.php#pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="/index.php#faq" onclick="closeMobileNav()">FAQ</a>
     <a href="mailto:contact@princegeorgedesign.com" class="mob-phone">contact@princegeorgedesign.com</a>
 </div>
