@@ -24,8 +24,9 @@
 
         <ul class="nav-links">
             <li><a href="/how-it-works.php">How it works</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/index.php#pricing">Pricing</a></li>
-            <li><a href="/index.php#faq">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
         </ul>
 
         <div class="nav-right">
