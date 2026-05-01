@@ -629,11 +629,11 @@ body {
   .process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--border);
+    /* border-top: 1px solid var(--border); */
   }
   .process-step {
     padding: 48px 40px 48px 0;
-    border-right: 1px solid var(--border);
+    /* border-right: 1px solid var(--border); */
     position: relative;
   }
   .process-step:last-child { border-right: none; padding-right: 0; }
