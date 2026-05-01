@@ -115,8 +115,8 @@ include_once(__DIR__ . '/../header.php');
     <div class="why-left">
       <h2 class="section-heading">Support that<br>actually <em>understands</em><br>your business.</h2>
       <div class="accent-block reveal">
-        <div class="big-num">236</div>
-        <p>Local area code. Local developer. Right here when you need us, working when you work.</p>
+        <div class="big-num">Your neighbor</div>
+        <p>Local developer. Right here when you need us, working when you work.</p>
       </div>
     </div>
     <div class="why-right">
