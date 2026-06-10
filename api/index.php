@@ -114,10 +114,10 @@ include_once(__DIR__ . '/../header.php');
   <div class="why-layout">
     <div class="why-left">
       <h2 class="section-heading">Support that<br>actually <em>understands</em><br>your business.</h2>
-      <div class="accent-block reveal">
+      <!-- <div class="accent-block reveal">
         <div class="big-num">CAD</div>
         <p>Local. No outsourcing. You get a direct line to a developer in Prince George, BC, who works when you work.</p>
-      </div>
+      </div> -->
     </div>
     <div class="why-right">
       <div class="why-item reveal">
