@@ -1,64 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const progressBar = document.getElementById("progressBar");
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
-    // 1. Smooth Scroll Progress Logic
-    window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        if (progressBar) {
-            progressBar.style.width = scrolled + "%";
-        }
-    });
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
 
-    // 2. Advanced Intersection Observer with Staggered Delays
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px" // Triggers slightly before element hits the view
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // If the element is a container (grid), stagger its children
-                if (entry.target.classList.contains('bento-grid') || 
-                    entry.target.classList.contains('pricing-grid') || 
-                    entry.target.classList.contains('stats-grid')) {
-                    
-                    const children = entry.target.querySelectorAll('.reveal');
-                    children.forEach((child, index) => {
-                        setTimeout(() => {
-                            child.classList.add('active');
-                        }, index * 150); // 150ms delay between each card
-                    });
-                } else {
-                    entry.target.classList.add('active');
-                }
-                // Unobserve after animating to save performance
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // 3. Track Grids and Standalone Elements
-    const revealElements = document.querySelectorAll('.reveal, .bento-grid, .pricing-grid, .stats-grid');
-    revealElements.forEach(el => {
-        observer.observe(el);
-    });
-
-    // 4. Hero Parallax Effect
-    // This makes the text move slightly slower than the scroll, creating depth
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroText = document.querySelector('.hero h1');
-        const heroTag = document.querySelector('.hero .hero-tag');
-        
-        if (heroText) {
-            heroText.style.transform = `translateY(${scrolled * 0.2}px)`;
-            heroText.style.opacity = 1 - (scrolled / 600);
-        }
-        if (heroTag) {
-            heroTag.style.transform = `translateY(${scrolled * 0.1}px)`;
-        }
-    });
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
 });
+
+function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// FAQ toggle
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+}

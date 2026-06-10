@@ -5,21 +5,10 @@
     }
   },
   "routes": [
-    { "src": "/", "dest": "/api/index.php" },
-    { "src": "/about", "dest": "/api/about.php" },
-    { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
-    { "src": "/faq", "dest": "/api/faq.php" },
-    { "src": "/why-us", "dest": "/api/why-us.php" },
-    { "src": "/shopify-support", "dest": "/api/shopify-support.php" },
-    { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
-    { "src": "/local-seo", "dest": "/api/local-seo.php" },
-    { "src": "/speed-optimization", "dest": "/api/speed-optimization.php" },
-    { "src": "/graphic-design", "dest": "/api/graphic-design.php" },
-    { "src": "/custom-development", "dest": "/api/custom-development.php" },
-    { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
-    { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
-    { "src": "/accessibility", "dest": "/api/accessibility.php" },
-    { "src": "/it-administration", "dest": "/api/it-admin.php" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
+    { "src": "/(services|how-it-works|faq|about|contact)", "dest": "/api/$1.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
