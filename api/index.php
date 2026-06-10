@@ -116,14 +116,14 @@ include_once(__DIR__ . '/../header.php');
       <h2 class="section-heading">Support that<br>actually <em>understands</em><br>your business.</h2>
       <div class="accent-block reveal">
         <div class="big-num">CAD</div>
-        <p>Canadian-Led. No outsourcing. You get a direct line to a developer in Prince George, BC, who works when you work.</p>
+        <p>Local. No outsourcing. You get a direct line to a developer in Prince George, BC, who works when you work.</p>
       </div>
     </div>
     <div class="why-right">
       <div class="why-item reveal">
         <span class="why-item-num">01</span>
         <div>
-          <h3>Canadian-Led.</h3>
+          <h3>Local.</h3>
           <p>No outsourcing. You get a direct line to a developer who understands your specific market and time zone.</p>
         </div>
       </div>
