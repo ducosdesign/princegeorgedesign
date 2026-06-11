@@ -120,16 +120,7 @@ include_once(__DIR__ . '/../header.php');
       </div>
     </div>
 
-    <!-- Q10 -->
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        What is your refund policy?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a">
-        Your satisfaction is guaranteed. If you are unsatisfied with a specific task, inform us within 48 hours of the report. We will either make it right or refund the time credits spent on that task in full, along with any unused balance.
-      </div>
-    </div>
+  
 
     <!-- Q11 -->
     <div class="faq-item">
