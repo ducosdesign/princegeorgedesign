@@ -65,10 +65,10 @@ include_once(__DIR__ . '/../header.php');
   <div class="why-layout">
     <div class="why-left">
       <div class="section-label">Peace of Mind</div>
-      <h2 class="section-heading">The 100%<br><em>Refund</em> Guarantee.</h2>
+      <h2 class="section-heading">The 100%<br><em>Trust</em> Experience.</h2>
       <div class="accent-block reveal">
         <div class="big-num">100</div>
-        <p>If you aren't satisfied with the quality of our work on your first task, we refund your entire block. No friction, no questions.</p>
+        <p>We are a partner you can completely trust. If the initial design isn't exactly what you envisioned, we will jump right in to refine it. No friction, just a total commitment to making it right.</p>
       </div>
     </div>
     <div class="why-right">
