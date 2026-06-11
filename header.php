@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php include_once(__DIR__ . '/analytics.php'); ?> 
+    <meta name="google-site-verification" content="Lyh9pJu5itY55-2GlarmbffHDiJGEm_t0PlBIJj225s" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prince George Design | Web Support & Shopify Experts</title>
