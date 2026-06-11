@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include_once(__DIR__ . '/analytics.php'); ?>
+    <?php include_once(__DIR__ . '/analytics.php'); ?> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prince George Design | Web Support & Shopify Experts</title>
