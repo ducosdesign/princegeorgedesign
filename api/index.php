@@ -32,7 +32,7 @@ include_once(__DIR__ . '/../header.php');
     <span class="ticker-item">Speed Optimization</span>
     <span class="ticker-item">Canadian SEO</span>
     <span class="ticker-item">24h Response</span>
-    <span class="ticker-item">100% Refund Guarantee</span>
+    <span class="ticker-item">100% You Can Trust</span>
     <span class="ticker-item">CAD Pricing</span>
     <span class="ticker-item">Proudly Based in BC</span>
     <!-- Loop for animation -->
@@ -41,7 +41,7 @@ include_once(__DIR__ . '/../header.php');
     <span class="ticker-item">Speed Optimization</span>
     <span class="ticker-item">Canadian SEO</span>
     <span class="ticker-item">24h Response</span>
-    <span class="ticker-item">100% Refund Guarantee</span>
+    <span class="ticker-item">100% You Can Trust</span>
     <span class="ticker-item">CAD Pricing</span>
     <span class="ticker-item">Proudly Based in BC</span>
   </div>
@@ -64,8 +64,8 @@ include_once(__DIR__ . '/../header.php');
   <div class="stats-grid reveal">
     <div class="stat-item">
       <div class="stat-number">100<span>%</span></div>
-      <div class="stat-label">Refund Guarantee</div>
-      <div class="stat-desc">Not satisfied? We make it right—no questions asked.</div>
+      <div class="stat-label">You Can Trust</div>
+      <div class="stat-desc">Not satisfied? We will work closely with you to refine the design and align it perfectly with your vision. Your peace of mind and a final product you love are our top priorities.</div>
     </div>
     <div class="stat-item">
       <div class="stat-number">24<span>h</span></div>
@@ -186,7 +186,7 @@ include_once(__DIR__ . '/../header.php');
       <div class="pricing-feature">4 Hours of Support</div>
       <div class="pricing-feature">Direct developer access</div>
       <div class="pricing-feature">Staging environment</div>
-      <div class="pricing-feature">100% refund guarantee</div>
+      <div class="pricing-feature">100% You Can Trust</div>
       <div class="pricing-cta">
         <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" class="btn btn-outline" style="width:100%; justify-content:center;">Get Started →</a>
       </div>
@@ -200,7 +200,7 @@ include_once(__DIR__ . '/../header.php');
       <div class="pricing-feature">Direct developer access</div>
       <div class="pricing-feature">Staging environment</div>
       <div class="pricing-feature">Priority response</div>
-      <div class="pricing-feature">100% refund guarantee</div>
+      <div class="pricing-feature">100% You Can Trust</div>
       <div class="pricing-cta">
         <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" class="btn btn-accent" style="width:100%; justify-content:center;">Get Started →</a>
       </div>
@@ -215,7 +215,7 @@ include_once(__DIR__ . '/../header.php');
       <div class="pricing-feature">Staging environment</div>
       <div class="pricing-feature">Priority response</div>
       <div class="pricing-feature">Full performance audit</div>
-      <div class="pricing-feature">100% refund guarantee</div>
+      <div class="pricing-feature">100% You Can Trust</div>
       <div class="pricing-cta">
         <a href="https://shop.princegeorgedesign.com/products/web-graphic-design-maintenance-hourly" class="btn btn-outline" style="width:100%; justify-content:center;">Get Started →</a>
       </div>
@@ -247,8 +247,7 @@ include_once(__DIR__ . '/../header.php');
         What if I'm not satisfied with the work?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">We offer a 100% refund guarantee. If the work doesn't meet your expectations, we'll make it right or refund your money. Our business model depends on your satisfaction.</div>
-    </div>
+  <div class="faq-a">We provide a 100% you can trust experience. If the design doesn't meet your expectations, we will work closely with you to refine it and make it right. Our business model depends entirely on your satisfaction and delivering a final product you love.</div>    </div>
   </div>
 </section>
 
