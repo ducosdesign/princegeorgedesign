@@ -5,61 +5,88 @@ include_once(__DIR__ . '/../header.php');
 
 <!-- HERO SECTION -->
 <section class="hero" style="min-height: 50svh; justify-content: center;">
-  <div class="hero-tag">Custom Packages</div>
-  <div class="hero-eyebrow">Tailored. Scalable. Fixed-Price.</div>
-  <h1>Bundle your requirements.<br>Get a precise <em>quote.</em></h1>
+  <div class="hero-tag">Work With Us</div>
+  <div class="hero-eyebrow">Limited Project Spaces Available</div>
+  <h1>Let’s build something<br><em>extraordinary together.</em></h1>
   <div class="hero-bottom">
     <p class="hero-desc">
-      Need more than standard maintenance? Choose one of our core package frameworks below or request a completely bespoke estimate tailored to your exact business specifications.
+      Please note our project spaces are limited so if you are planning to launch a project this year, don’t wait to reach out. Explore our services below and launch our assistant to start your application.
     </p>
   </div>
 </section>
 
-<!-- PACKAGE OPTIONS DEEP DIVE -->
+<!-- SERVICES & FRAMEWORKS DEEP DIVE -->
 <section id="package-deals" style="padding-top: 0;">
-  <div class="section-label">The Offerings</div>
-  <h2 class="section-heading">Frameworks designed to<br><em>kickstart your project.</em></h2>
+  <div class="section-label">Our Offerings</div>
+  <h2 class="section-heading">Tailored design & strategy<br><em>built for impact.</em></h2>
   
   <div class="why-right" style="border-top: 1px solid var(--border); margin-bottom: 60px;">
-    <!-- Package 1 -->
+    <!-- Core Brand & Web Strategy -->
     <div class="why-item reveal">
       <span class="why-item-num">01</span>
       <div>
-        <h3>The Launchpad Package</h3>
-        <p>Perfect for new startups or businesses looking to build a clean, lightning-fast web presence from scratch. Includes custom responsive design, foundational SEO setup, and essential CMS configuration.</p>
-        <button onclick="selectPackage('Launchpad Package')" class="btn btn-outline" style="margin-top: 16px;">Select Framework ↓</button>
+        <h3>Brand Strategy & Website Design</h3>
+        <p>Our flagship offering. We dive deep into your target positioning, design a beautiful custom Brand Identity, and deploy a high-performance web platform tailored entirely to your workflow. Most clients invest between $8,000 - $15,000 for this comprehensive transformation.</p>
+        <button onclick="openChatBot('Brand & Web Design')" class="btn btn-outline" style="margin-top: 16px;">Apply for This Tier →</button>
       </div>
     </div>
 
-    <!-- Package 2 -->
+    <!-- Website in a Week / Design Day -->
     <div class="why-item reveal">
       <span class="why-item-num">02</span>
       <div>
-        <h3>The Scale & Optimize Package</h3>
-        <p>For existing operations needing major performance upgrades, UI overhauls, or seamless API integrations (CRM, accounting plugins, or shipping endpoints). Built to eliminate your current site friction.</p>
-        <button onclick="selectPackage('Scale & Optimize Package')" class="btn btn-outline" style="margin-top: 16px;">Select Framework ↓</button>
+        <h3>Website in a Week & Design Days</h3>
+        <p>Highly requested accelerated options for rapid execution. Secure a dedicated <strong>Design Day ($2,500)</strong> or apply for our exclusive <strong>Website in a Week</strong> framework to skip traditional multi-month agency timelines. Limited availability.</p>
+        <button onclick="openChatBot('Website in a Week / Design Day')" class="btn btn-outline" style="margin-top: 16px;">Check Availability →</button>
       </div>
     </div>
 
-    <!-- Package 3 -->
+    <!-- Audits & Bootcamps -->
     <div class="why-item reveal">
       <span class="why-item-num">03</span>
       <div>
-        <h3>Bespoke Enterprise Scope</h3>
-        <p>Full-scale product architecture. If you need complex application builds, advanced databases, multi-tiered permission systems, or highly customized multi-tenant SaaS environments.</p>
-        <button onclick="selectPackage('Bespoke Enterprise Scope')" class="btn btn-outline" style="margin-top: 16px;">Select Framework ↓</button>
+        <h3>Business Coaching & Brand Bootcamps</h3>
+        <p>Looking for strategic clarity before scaling your infrastructure? We offer focused Brand Audits and direct Business + Brand Bootcamp programs (available during summer months) to fine-tune your business engine.</p>
+        <button onclick="openChatBot('Coaching / Bootcamp')" class="btn btn-outline" style="margin-top: 16px;">Inquire About Bootcamps →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTERACTIVE QUOTE REQUEST FORM SECTION -->
-<!-- deleted -->
+<!-- INVESTMENT EXPECTATION & BOT LAUNCH SECTION -->
+<section id="application-section" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0;">
+  <div class="why-layout">
+    <div class="why-left">
+      <div class="section-label">Investment & Scale</div>
+      <h2 class="section-heading">Ready to make<br><em>the investment?</em></h2>
+      <p style="color: var(--text-muted); line-height: 1.7; margin-top: 20px;">
+        We do our best to work within your budget, but professional branding does take time and we do ask that you are ready to make the investment. 
+      </p>
+      <p style="color: var(--text-muted); line-height: 1.7; margin-top: 12px;">
+        Most clients invest between <strong>$8,000 - $15,000</strong>, but we are always doing our best to make things work for both of us. Let's map out your parameters.
+      </p>
+    </div>
+    
+    <div class="why-right">
+      <!-- Chatbot Onboarding Prompt Card -->
+      <div style="background: var(--bg); border: 1px solid var(--border); padding: 40px; border-radius: 4px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;">
+        <div style="font-size: 2.5rem; line-height: 1;">✨</div>
+        <h3 style="margin: 0; font-size: 1.5rem;">Start Your Application</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 420px; margin: 0 auto; line-height: 1.6;">
+          Please tap below to launch our chat assistant. It will guide you through our core consultation script to capture your business goals, location, scope selection, and exact target budget parameters.
+        </p>
+        <button onclick="openChatBot('General Application')" class="btn btn-accent" style="width: 100%; max-width: 320px; justify-content: center; padding: 14px;">
+          Launch Project Application →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- BOTTOM CTA SECTION -->
+<!-- BOTTOM CONTACT & COMMUNITY INFO -->
 <div class="cta-section">
   <div class="cta-left">
-    <h2>Prefer an immediate<br>discovery <em>consultation?</em></h2>
+    <h2>Let’s be <em>friends!</em><br>Email our team directly.</h2>
     <div>
       <div class="cta-contact-item">
         <span class="cta-contact-label">Email</span>
@@ -69,7 +96,7 @@ include_once(__DIR__ . '/../header.php');
   </div>
   <div class="cta-right">
     <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">
-      If you have a formal RFP or design wireframes ready to transmit, feel free to submit them straight to our inbox. Let's build your next digital platform exactly as it should be.
+      We would love to follow your business journey! Feel free to connect with our studio on social media at <strong>@frontporchstudioca</strong>.
     </p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
       <a href="/index.php#pricing" class="btn btn-outline" style="justify-content: center;">Alternatively, Browse Fixed Support Blocks →</a>
@@ -77,13 +104,15 @@ include_once(__DIR__ . '/../header.php');
   </div>
 </div>
 
-<!-- Tiny helper JS to link package clicks to the form drop-down menu -->
+<!-- JavaScript Engine to trigger Tidio Widget -->
 <script>
-function selectPackage(packageName) {
-    const selector = document.getElementById('chosen-package');
-    if(selector) {
-        selector.value = packageName;
-        document.getElementById('quote-form-section').scrollIntoView({ behavior: 'smooth' });
+function openChatBot(contextSource) {
+    // Check if the Tidio chat object exists on the frontend window
+    if (typeof tidioChatApi !== 'undefined') {
+        tidioChatApi.open();
+    } else {
+        // Safe UX fallback if an adblocker or slow connection delays the widget script
+        alert("Our consultation assistant is loading in the bottom corner. If it does not pop up automatically, please write to us directly at contact@princegeorgedesign.com!");
     }
 }
 </script>
