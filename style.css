@@ -139,6 +139,8 @@ nav.scrolled { padding: 14px 48px; }
     padding: 4px;
     background: none;
     border: none;
+    position: relative;
+    z-index: 110; /* Ensures button stays on top of open drawer */
 }
 .hamburger span {
     display: block;
@@ -153,11 +155,11 @@ nav.scrolled { padding: 14px 48px; }
 
 /* Mobile nav drawer */
 .mobile-nav {
-    display: none;
+    display: flex; /* Changed from none to flex to support layout and transition animations */
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: #ffffff;
-    z-index: 99;
+    z-index: 105; /* Lifted above the default nav bar */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -165,8 +167,12 @@ nav.scrolled { padding: 14px 48px; }
     padding: 80px 40px 40px;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    pointer-events: none; /* Stops hidden overlay from stealing clicks */
 }
-.mobile-nav.open { transform: translateX(0); }
+.mobile-nav.open { 
+    transform: translateX(0); 
+    pointer-events: auto; /* Reactivates link selection when menu slides open */
+}
 .mobile-nav a {
     font-family: var(--serif);
     font-size: 2.2rem;
@@ -651,11 +657,9 @@ section { padding: 120px 48px; }
 .process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* border-top: 1px solid var(--border); */
 }
 .process-step {
     padding: 48px 40px 48px 0;
-    /* border-right: 1px solid var(--border); */
     position: relative;
 }
 .process-step:last-child { border-right: none; padding-right: 0; }
@@ -868,9 +872,14 @@ footer {
 @media (max-width: 1024px) {
     nav { padding: 18px 32px; }
     nav.scrolled { padding: 12px 32px; }
-    .nav-links, .status-badge { display: none; } /* Hide status badge on tablet/mobile if nav is hidden */
+    
+    /* FIX: Added .nav-phone here to keep it from overlapping/blocking the hamburger button layout */
+    .nav-links, .status-badge, .nav-phone { display: none; } 
+    
     .hamburger { display: flex; }
-    .mobile-nav { display: flex; }
+    
+    /* FIX: Removed ".mobile-nav { display: flex; }" block from here to allow default flex + opacity setup to control it smoothly */
+    
     section { padding: 80px 32px; }
     .hero { padding: 100px 32px 64px; }
     .hero-tag { right: 32px; }
