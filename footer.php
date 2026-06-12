@@ -14,5 +14,6 @@
 </footer>
 
 <script src="/script.js"></script>
+<script src="//code.tidio.co/vhkkuu5iycpuf4dktzhte2o5f6sysqqm.js" async></script>
 </body>
 </html>
