@@ -48,14 +48,14 @@ include_once(__DIR__ . '/../header.php');
 </div>
 
 <!-- PROMO BANNER -->
-<div class="promo-banner reveal">
+<!-- <div class="promo-banner reveal">
   <div class="promo-banner-left">
     <div class="promo-label">New Partner Special</div>
     <h2>$75 OFF<br>Your First Order</h2>
     <p>Discount automatically applied at checkout for all first-time Canadian partners.</p>
   </div>
   <a href="#pricing" class="btn-dark">Claim Your Discount →</a>
-</div>
+</div> -->
 
 <!-- STATS -->
 <section>
