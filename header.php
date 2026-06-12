@@ -33,7 +33,7 @@
 
         <div class="nav-right">
             <a href="mailto:contact@princegeorgedesign.com" class="nav-phone">contact@princegeorgedesign.com</a>
-            <a href="tel:+12363316939" class="footer-phone">+1 (236) 331-6939</a>
+            <a href="tel:+12363316939" class="nav-phone">+1 (236) 331-6939</a>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -46,4 +46,5 @@
     <a href="/#pricing" onclick="closeMobileNav()">Pricing</a>
     <a href="/faq" onclick="closeMobileNav()">FAQ</a>
     <a href="mailto:contact@princegeorgedesign.com" class="mob-phone">contact@princegeorgedesign.com</a>
+    <a href="tel:+12363316939" class="mob-phone">+1 (236) 331-6939</a>
 </div>
