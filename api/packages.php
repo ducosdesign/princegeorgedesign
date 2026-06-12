@@ -5,78 +5,78 @@ include_once(__DIR__ . '/../header.php');
 
 <!-- HERO SECTION -->
 <section class="hero" style="min-height: 50svh; justify-content: center;">
-  <div class="hero-tag">Work With Us</div>
-  <div class="hero-eyebrow">Limited Project Spaces Available</div>
-  <h1>Let’s build something<br><em>extraordinary together.</em></h1>
+  <div class="hero-tag">Get a Quote</div>
+  <div class="hero-eyebrow">Simple. No Obligation. Real Help.</div>
+  <h1>Tell us about your project.<br>We’ll give you a <em>fair price.</em></h1>
   <div class="hero-bottom">
     <p class="hero-desc">
-      Please note our project spaces are limited so if you are planning to launch a project this year, don’t wait to reach out. Explore our services below and launch our assistant to start your application.
+      Whether you need a brand-new website, some custom development work, or fresh graphic design, we make getting a quote incredibly easy. No pushy sales talk—just tell us what you need.
     </p>
   </div>
 </section>
 
-<!-- SERVICES & FRAMEWORKS DEEP DIVE -->
-<section id="package-deals" style="padding-top: 0;">
-  <div class="section-label">Our Offerings</div>
-  <h2 class="section-heading">Tailored design & strategy<br><em>built for impact.</em></h2>
+<!-- WHAT WE CAN HELP WITH (PLAIN ENGLISH) -->
+<section id="what-we-do" style="padding-top: 0;">
+  <div class="section-label">Our Services</div>
+  <h2 class="section-heading">What are you looking<br><em>to get done?</em></h2>
   
   <div class="why-right" style="border-top: 1px solid var(--border); margin-bottom: 60px;">
-    <!-- Core Brand & Web Strategy -->
+    <!-- Web Design & Development -->
     <div class="why-item reveal">
       <span class="why-item-num">01</span>
       <div>
-        <h3>Brand Strategy & Website Design</h3>
-        <p>Our flagship offering. We dive deep into your target positioning, design a beautiful custom Brand Identity, and deploy a high-performance web platform tailored entirely to your workflow. Most clients invest between $8,000 - $15,000 for this comprehensive transformation.</p>
-        <button onclick="openChatBot('Brand & Web Design')" class="btn btn-outline" style="margin-top: 16px;">Apply for This Tier →</button>
+        <h3>Website Design & Development</h3>
+        <p>Need a brand new website from scratch, or an update to your current one so it actually looks modern and works right? We handle the design, mobile optimization, and all the technical coding details.</p>
+        <button onclick="openChatBot('Website Help')" class="btn btn-outline" style="margin-top: 16px;">Get a Web Quote →</button>
       </div>
     </div>
 
-    <!-- Website in a Week / Design Day -->
+    <!-- Graphics & Branding -->
     <div class="why-item reveal">
       <span class="why-item-num">02</span>
       <div>
-        <h3>Website in a Week & Design Days</h3>
-        <p>Highly requested accelerated options for rapid execution. Secure a dedicated <strong>Design Day ($2,500)</strong> or apply for our exclusive <strong>Website in a Week</strong> framework to skip traditional multi-month agency timelines. Limited availability.</p>
-        <button onclick="openChatBot('Website in a Week / Design Day')" class="btn btn-outline" style="margin-top: 16px;">Check Availability →</button>
+        <h3>Graphics, Logos & Branding</h3>
+        <p>Looking for a professional logo, clean branding, or custom graphics for your business? We create eye-catching visuals that help your company stand out and look established.</p>
+        <button onclick="openChatBot('Graphic Design Help')" class="btn btn-outline" style="margin-top: 16px;">Get a Graphics Quote →</button>
       </div>
     </div>
 
-    <!-- Audits & Bootcamps -->
+    <!-- Custom Tweaks & Fixes -->
     <div class="why-item reveal">
       <span class="why-item-num">03</span>
       <div>
-        <h3>Business Coaching & Brand Bootcamps</h3>
-        <p>Looking for strategic clarity before scaling your infrastructure? We offer focused Brand Audits and direct Business + Brand Bootcamp programs (available during summer months) to fine-tune your business engine.</p>
-        <button onclick="openChatBot('Coaching / Bootcamp')" class="btn btn-outline" style="margin-top: 16px;">Inquire About Bootcamps →</button>
+        <h3>Custom Tech Help & Maintenance</h3>
+        <p>Have a specific feature you want to add, a plugin that broke, or just need a reliable developer to fix up errors on your current site? We do quick tech fixes to keep your business running smoothly.</p>
+        <button onclick="openChatBot('Tech Help / Maintenance')" class="btn btn-outline" style="margin-top: 16px;">Get a Maintenance Quote →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INVESTMENT EXPECTATION & BOT LAUNCH SECTION -->
-<section id="application-section" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0;">
+<!-- BUDGET PROMISE & BOT CALL TO ACTION -->
+<section id="budget-promise-section" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0;">
   <div class="why-layout">
     <div class="why-left">
-      <div class="section-label">Investment & Scale</div>
-      <h2 class="section-heading">Ready to make<br><em>the investment?</em></h2>
+      <div class="section-label">Our Promise</div>
+      <h2 class="section-heading">We stick to<br><em>your budget.</em></h2>
       <p style="color: var(--text-muted); line-height: 1.7; margin-top: 20px;">
-        We do our best to work within your budget, but professional branding does take time and we do ask that you are ready to make the investment. 
+        Nobody likes surprise fees or projects that end up costing double what you expected. 
       </p>
       <p style="color: var(--text-muted); line-height: 1.7; margin-top: 12px;">
-        Most clients invest between <strong>$8,000 - $15,000</strong>, but we are always doing our best to make things work for both of us. Let's map out your parameters.
+        You tell us what you can afford to spend, and we will tell you exactly what we can build for that amount. Once we agree on a price, **that is the price.** No hidden costs, period.
       </p>
     </div>
     
     <div class="why-right">
-      <!-- Chatbot Onboarding Prompt Card -->
+      <!-- Plain English Chatbot Prompt Card -->
       <div style="background: var(--bg); border: 1px solid var(--border); padding: 40px; border-radius: 4px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;">
-        <div style="font-size: 2.5rem; line-height: 1;">✨</div>
-        <h3 style="margin: 0; font-size: 1.5rem;">Start Your Application</h3>
+        <div style="font-size: 2.5rem; line-height: 1;">💬</div>
+        <h3 style="margin: 0; font-size: 1.5rem;">Chat with our Assistant</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 420px; margin: 0 auto; line-height: 1.6;">
-          Please tap below to launch our chat assistant. It will guide you through our core consultation script to capture your business goals, location, scope selection, and exact target budget parameters.
+          Tap the button below to open our quick chat window. Our assistant will ask you a few simple questions about what you need and what your budget looks like so we can send over a fast quote.
         </p>
-        <button onclick="openChatBot('General Application')" class="btn btn-accent" style="width: 100%; max-width: 320px; justify-content: center; padding: 14px;">
-          Launch Project Application →
+        <button onclick="openChatBot('General Quote')" class="btn btn-accent" style="width: 100%; max-width: 320px; justify-content: center; padding: 14px;">
+          Start Your Quick Quote →
         </button>
       </div>
     </div>
@@ -86,7 +86,7 @@ include_once(__DIR__ . '/../header.php');
 <!-- BOTTOM CONTACT & COMMUNITY INFO -->
 <div class="cta-section">
   <div class="cta-left">
-    <h2>Let’s be <em>friends!</em><br>Email our team directly.</h2>
+    <h2>Prefer to just send<br>a regular <em>email?</em></h2>
     <div>
       <div class="cta-contact-item">
         <span class="cta-contact-label">Email</span>
@@ -96,23 +96,21 @@ include_once(__DIR__ . '/../header.php');
   </div>
   <div class="cta-right">
     <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">
-      We would love to follow your business journey! Feel free to connect with our studio on social media at <strong>@frontporchstudioca</strong>.
+      If you already have a list of requirements written down, or want to send us a direct message, feel free to drop it in an email. We'd also love to follow your business on Instagram at <strong>@frontporchstudioca</strong>!
     </p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <a href="/index.php#pricing" class="btn btn-outline" style="justify-content: center;">Alternatively, Browse Fixed Support Blocks →</a>
+      <a href="/index.php#pricing" class="btn btn-outline" style="justify-content: center;">View Our Fixed Support Blocks instead →</a>
     </div>
   </div>
 </div>
 
-<!-- JavaScript Engine to trigger Tidio Widget -->
+<!-- JavaScript to instantly launch Tidio -->
 <script>
-function openChatBot(contextSource) {
-    // Check if the Tidio chat object exists on the frontend window
+function openChatBot(projectType) {
     if (typeof tidioChatApi !== 'undefined') {
         tidioChatApi.open();
     } else {
-        // Safe UX fallback if an adblocker or slow connection delays the widget script
-        alert("Our consultation assistant is loading in the bottom corner. If it does not pop up automatically, please write to us directly at contact@princegeorgedesign.com!");
+        alert("Our chat assistant is loading. If the window doesn't open automatically, please send us a quick email at contact@princegeorgedesign.com!");
     }
 }
 </script>
