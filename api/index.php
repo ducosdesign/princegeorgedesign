@@ -262,7 +262,7 @@ include_once(__DIR__ . '/../header.php');
       </div>
       <div class="cta-contact-item">
         <span class="cta-contact-label">Location</span>
-        <span class="cta-contact-value">Canada-Wide Support</span>
+        <span class="cta-contact-value">Worldwide Support</span>
       </div>
     </div>
   </div>
