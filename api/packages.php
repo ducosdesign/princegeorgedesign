@@ -54,53 +54,7 @@ include_once(__DIR__ . '/../header.php');
 </section>
 
 <!-- INTERACTIVE QUOTE REQUEST FORM SECTION -->
-<section id="quote-form-section" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0;">
-  <div class="why-layout">
-    <div class="why-left">
-      <div class="section-label">Estimate Tool</div>
-      <h2 class="section-heading">Tell us about<br><em>your scope.</em></h2>
-      <p style="color: var(--text-muted); line-height: 1.7; margin-top: 20px;">
-        Fill out your baseline parameters here. Our team will analyze your architecture requirements and deliver a detailed fixed-price quote or schedule a brief, direct call within 24 business hours.
-      </p>
-    </div>
-    
-    <div class="why-right">
-      <!-- Styled Form Container to seamlessly blend with existing feature-card properties -->
-      <form action="" method="POST" style="background: var(--bg); border: 1px solid var(--border); padding: 32px; border-radius: 4px; display: flex; flex-direction: column; gap: 20px;">
-        
-        <div>
-          <label style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-weight: 600;">Selected Configuration Framework</label>
-          <select id="chosen-package" name="package_type" style="width: 100%; padding: 12px; background: var(--bg2); border: 1px solid var(--border); color: inherit; border-radius: 4px; font-family: inherit; font-size: 0.95rem;">
-            <option value="General Custom Quote">-- Select a package or option --</option>
-            <option value="Launchpad Package">The Launchpad Package</option>
-            <option value="Scale & Optimize Package">The Scale & Optimize Package</option>
-            <option value="Bespoke Enterprise Scope">Bespoke Enterprise Scope</option>
-          </select>
-        </div>
-
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 200px;">
-            <label style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-weight: 600;">Your Name *</label>
-            <input type="text" name="client_name" required style="width: 100%; padding: 12px; background: var(--bg2); border: 1px solid var(--border); color: inherit; border-radius: 4px; font-family: inherit; box-sizing: border-box;">
-          </div>
-          <div style="flex: 1; min-width: 200px;">
-            <label style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-weight: 600;">Email Address *</label>
-            <input type="email" name="client_email" required style="width: 100%; padding: 12px; background: var(--bg2); border: 1px solid var(--border); color: inherit; border-radius: 4px; font-family: inherit; box-sizing: border-box;">
-          </div>
-        </div>
-
-        <div>
-          <label style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-weight: 600;">Project Scope & Key Functionalities</label>
-          <textarea name="project_details" rows="5" placeholder="Describe what functionalities you need (e.g., e-commerce, user registration, integration targets, timeline preferences)..." style="width: 100%; padding: 12px; background: var(--bg2); border: 1px solid var(--border); color: inherit; border-radius: 4px; font-family: inherit; line-height: 1.5; resize: vertical; box-sizing: border-box;"></textarea>
-        </div>
-
-        <div style="margin-top: 10px;">
-          <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center; padding: 14px;">Submit Quote Request →</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+<!-- deleted -->
 
 <!-- BOTTOM CTA SECTION -->
 <div class="cta-section">
