@@ -9,6 +9,7 @@
   <div class="footer-bottom">
     <span class="footer-copy">© <?php echo date("Y"); ?> Prince George Design. Operated by Emeliza Ducos.</span>
     <a href="mailto:contact@princegeorgedesign.com" class="footer-phone">contact@princegeorgedesign.com</a>
+    <a href="tel:+12363316939" class="footer-phone">+1 (236) 331-6939</a>
   </div>
 </footer>
 
