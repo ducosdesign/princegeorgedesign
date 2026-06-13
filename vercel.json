@@ -8,6 +8,7 @@
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
     { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/(about|accessibility|contact|custom-development|emergency-support|faq|graphic-design|how-it-works|index|it-admin|local-seo|packages|services|shopify-support|speed-optimization|theme-migration|version|why-us|wordpress-maintenance)", "dest": "/api/$1.php" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
