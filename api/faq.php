@@ -61,7 +61,7 @@ include_once(__DIR__ . '/../header.php');
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a">
-        We are a 100% Canadian-led team. Our core developers work Monday through Friday during standard North American business hours, ensuring we are available when you are. We are closed on weekends and Canadian statutory holidays.
+        Our core developers work Monday through Friday during standard North American business hours, ensuring we are available when you are. We are closed on weekends and Canadian statutory holidays.
       </div>
     </div>
 
@@ -146,7 +146,7 @@ include_once(__DIR__ . '/../header.php');
     </div>
   </div>
   <div class="cta-right">
-    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">We're here to make your web experience effortless. Reach out for a direct conversation with a Canadian developer.</p>
+    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">We're here to make your web experience effortless. Reach out for a direct conversation with a Local developer.</p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
       <a href="/index#pricing" class="btn btn-accent" style="justify-content: center;">View Support Blocks →</a>
     </div>
