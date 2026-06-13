@@ -6,11 +6,11 @@ include_once(__DIR__ . '/../header.php');
 <!-- HERO SECTION -->
 <section class="hero" style="min-height: 60svh; justify-content: center;">
   <div class="hero-tag">Our Process</div>
-  <div class="hero-eyebrow">Efficient. Transparent. Canadian.</div>
+  <div class="hero-eyebrow">Efficient. Transparent. Local</div>
   <h1>Support that flows<br>with your <em>workflow.</em></h1>
   <div class="hero-bottom">
     <p class="hero-desc">
-      We’ve eliminated the friction of traditional agencies. No complex ticketing systems—just direct access to Canadian developers.
+      We’ve eliminated the friction of traditional agencies. No complex ticketing systems—just direct access to Local developers.
     </p>
   </div>
 </section>
@@ -100,7 +100,7 @@ include_once(__DIR__ . '/../header.php');
     </div>
   </div>
   <div class="cta-right">
-    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">Stop managing your website and start managing your business. Let our Canadian experts handle the technical details.</p>
+    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px;">Stop managing your website and start managing your business. Let our Local experts handle the technical details.</p>
     <div style="display: flex; flex-direction: column; gap: 12px;">
       <a href="/index.php#pricing" class="btn btn-accent" style="justify-content: center;">Browse Support Blocks →</a>
     </div>
