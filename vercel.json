@@ -9,27 +9,7 @@
     { "src": "/script.js", "dest": "/script.js" },
     { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    
-    { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
-    { "src": "/faq", "dest": "/api/faq.php" },
-    { "src": "/about", "dest": "/api/about.php" },
-    { "src": "/contact", "dest": "/api/contact.php" },
-    { "src": "/custom-development", "dest": "/api/custom-development.php" },
-    { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
-    { "src": "/graphic-design", "dest": "/api/graphic-design.php" },
-    { "src": "/accessibility", "dest": "/api/accessibility.php" },
-    { "src": "/it-admin", "dest": "/api/it-admin.php" },
-    
-    { "src": "/local-seo", "dest": "/api/local-seo.php" },
-    { "src": "/packages", "dest": "/api/packages.php" },
-    { "src": "/services", "dest": "/api/services.php" },
-    { "src": "/shopify-support", "dest": "/api/shopify-support.php" },
-    { "src": "/speed-optimization", "dest": "/api/speed-optimization.php" },
-    { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
-    { "src": "/version", "dest": "/api/version.php" },
-    { "src": "/why-us", "dest": "/api/why-us.php" },
-    { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
-
-    { "src": "/", "dest": "/api/index.php" }
+    { "src": "/(services|how-it-works|faq|about|contact|packages|custom-development|emergency-support|graphic-design|accessibility|it-admin|local-seo|shopify-support|speed-optimization|theme-migration|version|why-us|wordpress-maintenance)", "dest": "/api/$1.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
