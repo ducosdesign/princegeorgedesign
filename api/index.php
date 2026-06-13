@@ -181,7 +181,7 @@ include_once(__DIR__ . '/../header.php');
     <div class="pricing-card reveal">
       <div class="pricing-tag">Starter</div>
       <h3>Starter</h3>
-      <div class="pricing-price"><sup>$</sup>149</div>
+      <div class="pricing-price"><sup>$</sup>200</div>
       <div class="pricing-unit">CAD / block</div>
       <div class="pricing-feature">4 Hours of Support</div>
       <div class="pricing-feature">Direct developer access</div>
@@ -194,7 +194,7 @@ include_once(__DIR__ . '/../header.php');
     <div class="pricing-card featured reveal reveal-delay-1">
       <div class="pricing-tag">Most Popular</div>
       <h3>Growth</h3>
-      <div class="pricing-price"><sup>$</sup>299</div>
+      <div class="pricing-price"><sup>$</sup>450</div>
       <div class="pricing-unit">CAD / block</div>
       <div class="pricing-feature">10 Hours of Support</div>
       <div class="pricing-feature">Direct developer access</div>
@@ -208,7 +208,7 @@ include_once(__DIR__ . '/../header.php');
     <div class="pricing-card reveal reveal-delay-2">
       <div class="pricing-tag">Scale</div>
       <h3>Scale</h3>
-      <div class="pricing-price"><sup>$</sup>499</div>
+      <div class="pricing-price"><sup>$</sup>850</div>
       <div class="pricing-unit">CAD / block</div>
       <div class="pricing-feature">20 Hours of Support</div>
       <div class="pricing-feature">Direct developer access</div>
