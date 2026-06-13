@@ -30,6 +30,6 @@
     { "src": "/why-us", "dest": "/api/why-us.php" },
     { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
 
-    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/", "dest": "/api/index.php" }
   ]
 }
