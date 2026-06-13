@@ -5,7 +5,7 @@
       <p class="footer-desc">Premium web support and digital maintenance for businesses across Canada. Grown in BC.</p>
     </div>
     <!-- Platform Support, Optimization, and Company columns as previously provided... -->
-  </div>
+  </div> 
   <div class="footer-bottom">
     <span class="footer-copy">© <?php echo date("Y"); ?> Prince George Design.</span>
     <a href="mailto:contact@princegeorgedesign.com" class="footer-phone">contact@princegeorgedesign.com</a>
