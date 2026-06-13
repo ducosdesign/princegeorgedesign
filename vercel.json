@@ -4,7 +4,6 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "cleanUrls": true,
   "routes": [
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
@@ -24,3 +23,4 @@
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
+
