@@ -10,6 +10,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <!-- Local Business SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Prince George Design",
+      "image": "https://princegeorgedesign.com/PG-icon.png",
+      "telephone": "+1-236-331-6939",
+      "url": "https://princegeorgedesign.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Prince George",
+        "addressRegion": "BC",
+        "postalCode": "V2L",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.9171,
+        "longitude": -122.7497
+      },
+      "sameAs": [
+        "https://shop.princegeorgedesign.com"
+      ]
+    }
+    </script>
 </head>
 <body>
 
