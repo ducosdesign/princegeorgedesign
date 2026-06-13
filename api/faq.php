@@ -129,8 +129,7 @@ include_once(__DIR__ . '/../header.php');
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a">
-        Our primary method of support is via email to maintain a clear "paper trail" of all technical changes. For quick check-ins, we are available on Slack or Skype. If you prefer a more structured workflow, we can arrange a dedicated workspace in Asana for your projects.
-      </div>
+      Our primary methods of support are via email and our live chat box. This ensures we maintain a clear digital record of all technical updates while staying instantly accessible for quick check-ins and real-time assistance.      </div>
     </div>
   </div>
 </section>
