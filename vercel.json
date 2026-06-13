@@ -4,11 +4,23 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
+  "cleanUrls": true,
   "routes": [
     { "src": "/style.css", "dest": "/style.css" },
     { "src": "/script.js", "dest": "/script.js" },
     { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
-    { "src": "/(services|how-it-works|faq|about|contact|packages)", "dest": "/api/$1.php" },
+    
+    { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
+    { "src": "/faq", "dest": "/api/faq.php" },
+    { "src": "/about", "dest": "/api/about.php" },
+    { "src": "/contact", "dest": "/api/contact.php" },
+    { "src": "/custom-development", "dest": "/api/custom-development.php" },
+    { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
+    { "src": "/graphic-design", "dest": "/api/graphic-design.php" },
+    { "src": "/accessibility", "dest": "/api/accessibility.php" },
+    { "src": "/it-admin", "dest": "/api/it-admin.php" },
+
+    { "src": "/", "dest": "/api/index.php" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
