@@ -4,13 +4,32 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "rewrites": [
-    { "source": "/style.css", "destination": "/style.css" },
-    { "source": "/script.js", "destination": "/script.js" },
-    { "source": "/PG-icon.png", "destination": "/PG-icon.png" },
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+  "routes": [
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/PG-icon.png", "dest": "/PG-icon.png" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     
-    { "source": "/", "destination": "/api/index.php" },
-    { "source": "/((?!api/).*)", "destination": "/api/$1.php" }
+    { "src": "/how-it-works", "dest": "/api/how-it-works.php" },
+    { "src": "/faq", "dest": "/api/faq.php" },
+    { "src": "/about", "dest": "/api/about.php" },
+    { "src": "/contact", "dest": "/api/contact.php" },
+    { "src": "/custom-development", "dest": "/api/custom-development.php" },
+    { "src": "/emergency-support", "dest": "/api/emergency-support.php" },
+    { "src": "/graphic-design", "dest": "/api/graphic-design.php" },
+    { "src": "/accessibility", "dest": "/api/accessibility.php" },
+    { "src": "/it-admin", "dest": "/api/it-admin.php" },
+    
+    { "src": "/local-seo", "dest": "/api/local-seo.php" },
+    { "src": "/packages", "dest": "/api/packages.php" },
+    { "src": "/services", "dest": "/api/services.php" },
+    { "src": "/shopify-support", "dest": "/api/shopify-support.php" },
+    { "src": "/speed-optimization", "dest": "/api/speed-optimization.php" },
+    { "src": "/theme-migration", "dest": "/api/theme-migration.php" },
+    { "src": "/version", "dest": "/api/version.php" },
+    { "src": "/why-us", "dest": "/api/why-us.php" },
+    { "src": "/wordpress-maintenance", "dest": "/api/wordpress-maintenance.php" },
+
+    { "src": "/", "dest": "/api/index.php" },
   ]
 }
